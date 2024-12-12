@@ -3,17 +3,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>memaudata</title>
+    <link rel="stylesheet" href="../static/style.css"> 
     <!-- Add the memaudata icon --> 
     <link rel="icon"  sizes="500x500" href="/static/favicon.png">
     <style>
       body {
         font-family: 'Courier New';
-        text-align: center;
-        height: 100vh;
         display: flex;
-        flex-direction: column;
+        /*flex-direction: column;
         justify-content: center;
         align-items: center;
+        min-height: 100vh; /* 100% of the viewport height */
       }
   
       h2 {
@@ -25,11 +25,199 @@
         font-style: italic;
         font-weight: lighter;
       }
+      header {
+      background-color: white;
+      color: rgb(190, 40, 40);
+      padding: 20px;
+      font-family: 'Courier New';
+      font-style: italic;
+      font-weight: lighter;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+   
+
+    header nav {
+      float: right;
+    }
+
+    header nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    header nav li {
+      float: left;
+    }
+
+    header nav li a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+  
+  
+  .central_container {
+    display: flex;
+    align-items: center;
+    height: 80vh; 
+    margin-block:260px 50px;
+    flex-direction: column;
+  }
+
+  .projects_container {
+  /*background-color: #f0f0f0;*/
+  padding: 50px;
+  /*border: 1px solid #ccc;*/
+} 
+
+
+  .publications_container {
+  /*background-color: #f0f0f0;*/
+  padding: 50px;
+  margin-block: 50px 100px;
+  }
+
+
+    /*max-height: max-content;
+    /*max-width: 500px;
+    /*text-align: center;
+    align-items: center;
+    
+    display: flex;
+    /*
+    overflow-y: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%; /* Adjust the width as needed */
+   /*margin: 0 auto; /* Center the container horizontally */
+   /*text-align: center; /* Center the content within the container */
+}
+
+  /* Styling for specific sections */
+
+
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+/*@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }} */
+    
     </style>
   </head>
+
   <body>
-    <h2>Nicolas Vannson, PhD</h2>
-    <p>I'm Nick, a beer lover, traveler and also data science and teaching passionate</p>
-    <p>This is my webpage. Unfortunately, she's currently under construction. I'm sorry.</p>
-    <p>Stay tuned!</p>
+  <!--Nav bar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#Projects">Data science projects and not</a></li>
+        <li><a href="#Publications">Publications</a></li>
+        <li><a href="#Presentations">Selection of presentations</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main text presentation -->
+  <main>
+
+
+    <section  class="central_container">
+      <h2>Nicolas Vannson,PhD</h2>
+      <p>I'm Nick, a beer lover, traveler, and data science and teaching enthusiast.</p>
+      <p>This is my webpage. Unfortunately, it's currently under construction. I apologize for the inconvenience.</p>
+      <p>Stay tuned!</p>
+      <!-- Linkedin logo-->
+      <a href="https://www.linkedin.com/in/nicolas-vannson-phd/" target="_blank">
+        <img src="static/linkedin-logo.png" alt="LinkedIn" width="30" height="30">
+    </a>
+    </section>
+
+
+    <!-- Add chapter below which are CV sections--> 
+    <section id="Projects" class="projects_container">
+      <h2>Data science projects and not</h2>
+    </section> 
+  
+    <section id="Publications" class="publications_container" >
+        <h2>Publications</h2>
+        <b>Publications in journal with a peer review committee</b>
+        <br>
+        <ul>
+          <li>Berger T.,  <strong>Vannson N.</strong> (in prep, 2025). <i>Assessment of psychological distress and thymia in newly fitted presbyacusic patients.</i></li>
+          <li>Mazet M., Enzler F.,  <strong>Vannson N.</strong> (in prep, 2025). <i>Pediatric speech-in-noise audiometry tests with standardized background noise: Systematic review of the literature.</i></li>
+            <li>Gransagne C.,  <strong>Vannson N.</strong> (2024). <i>Comparison of Class I and Class II hearing aids in patients with severe hearing loss.</i> Canadian Acoustics, 2024, vol. 52, no 3.</li>
+            <li> <strong>Vannson N.</strong>, Kauramaki J., Strelnikov K., Deguine O., Schönwiesner M., Barone P. (submitted 2024). <i>Long-term adaptation to cochlear implant simulation: A behavioral and EEG study.</i></li>
+            <li>Brazeau P., Spella P.,  <strong>Vannson N.</strong> (2024). <i>Evaluation of the evolution of cognition in presbycusis patients.</i> Revue de Geriatrie,49(5),273-82.</li>
+            <li>Mandin C., Spella P.,  <strong>Vannson N.</strong> (2024). <i>Study of the impact of hearing aid rehabilitation on self-esteem in presbycusis patients with first-time hearing aids.</i> Revue de Geriatrie,49(2),83-94.</li>
+            <li>Alzaher M.,  <strong>Vannson N.</strong>, Deguine O., Marx M., Barone P.,Strelnikov K. (2021). <i>Brain plasticity and hearing disorders.</i> Revue neurologique, 177(9), 1121-1132.</li>
+            <li> <strong>Vannson N.</strong>, Strelnikov, K., James J., C., Deguine, O., Barone, P., Marx, M. (2020). <i>Evidence of a functional reorganization in the auditory dorsal stream following unilateral hearing loss.</i> Neuropsychologia, 149, 107683.</li>
+            <li> <strong>Vannson N.</strong>, James, C., Fraysse, B., Strelnikov, K., Deguine, O., Marx, M., Barone, P. (2017). <i>Speech-in-noise perception in unilateral hearing loss: Relation to pure-tone thresholds and brainstem plasticity.</i> Neuropsychologia, 102, 135-143.</li>
+            <li> <strong>Vannson N.</strong>, (2016). <i>Unilateral hearing loss : Psychoacoustic, quality of life questionnaires and neuroimagning (fMRI) approaches.</i> (Doctoral dissertation),Université Toulouse III-Paul Sabatier.</li>
+            <li> <strong>Vannson N.</strong>, James, C., Fraysse, B., Strelnikov, K., Barone, P., Deguine, O.,Marx, M. (2015). <i>Quality of Life and Auditory Performance in Adults with Asymmetric Hearing Loss.</i> Audiology and Neurotology.</li>
+            <li> <strong>Vannson N.</strong>, Innes-Brown, H., Marozeau, J. (2015). <i>Dichotic Listening Can Improve Perceived Clarity of Music in Cochlear Implant Users.</i> Trends in Hearing.</li>
+        </ul>
+            <b>Publications in journal without a peer review committee</b>
+        <ul>
+          <li><strong>Vannson N.</strong>, Innes-Brown, H., Marozeau, J. (2018). <i>L‘écoute dichotique chez un sujet implanté cochléaire peut améliorer la perception de la clarté de la musique.</i> Revue ACFOS, numéro 60. </li>
+          <li>Deguine, O., <strong>Vannson N.</strong>, Molinier, C., Marx, M., Lescure, B., Barone, P. (2014). <i>Évaluation du handicap perceptif après surdité unilatérale : évaluation psychoacoustique et qualité de vie.</i> Annales françaises d’Oto-rhino-laryngologie et de Pathologie Cervico-faciale.</li>
+        </ul>  
+    </section>
+
+    <!-- Use same parameters for this sections--> 
+    <section id="Presentations" class="projects_container">
+      <h2>Selection of presentations</h2>
+
+<ul>
+  <li>
+    <strong>December 2020</strong>.Oral presentation.Regional professional meeting of Audiologists and speech therapists.Toulouse(France).<i>Title: Audiological evaluations<i>
+  </li>
+  <li>
+    <strong>November 2019</strong>.Oral presentation.AFON.Dijon(France).<i>Title: Evaluation of the perceptual handicap after unilateral hearing loss. Psychoacoustic and fMRI approaches.</i>
+
+  </li>
+  <li>
+    <strong>June 2017</strong>.Poster presentation. Neuroscience and Music VI. Boston(USA)
+  </li>
+  <li>
+    <strong>September 2015</strong>.Oral presentation.1st Otology and Neurotology French association conference day.Paris (France).<i>Title: Evaluation of the perceptual handicap after unilateral hearing loss. Psychoacoustic and fMRI approaches.</i>
+  </li>
+  <li>
+    <strong>July 2015</strong>.Poster presentation.CIAP.Lake Tahoe, CA (USA).<i>Title: Evaluation of the perceptual handicap after unilateral hearing loss. Psychoacoustic and Quality of life approaches.</i>
+  </li>
+  <li>
+    <strong>April 2015</strong>.Oral presentation. 6th International audiology workshop. Clermont.Ferrand (France).<i>Title: Evaluation of the perceptual handicap after unilateral hearing loss. Psychoacoustic and Quality of life approaches.</i>
+  </li>
+  </li>
+  <li>
+    <strong>October 2014</strong> Oral presentation. ENT National French congress. Paris (France).<i>Title: Evaluation of the perceptual handicap after unilateral hearing loss. Psychoacoustic and Quality of life approaches.</i>
+  </li>
+  <li>
+    <strong>October 2012</strong>.Oral presentation.BRAMS. Montreal (Canada). <i>Title: Enhancement of music perception for cochlear implant recipients</i>
+
+  </li>
+  <li>
+    <strong>August 2012</strong>.Oral presentation.Bionics Institute.Melbourne (Australia).<i>Title: Inner hair cell innervation from confocal images</li>
+  </li>
+  <li>
+    <strong>May 2012</strong>.Oral presentation at the Music Performance and Perception Research Day. Sydney (Australia).<i>Title: Enhancement of music perception for cochlear implant recipients</i>
+  </li>
+</ul>
+    </section> 
+  
+  </main>
+ 
+
+  <!-- Footer -->  
+  <footer>
+  </footer>
   </body>
