@@ -58,8 +58,9 @@ body {
     min-height: 100vh; /* 100% of the viewport height */
   }
 
-  h2 {
+  h3 {
     margin-bottom: 10px;
+    text-align: center;
   }
 
   p {
