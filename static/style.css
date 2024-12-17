@@ -6,8 +6,6 @@ Date : December 2024
 
 
 /*Nav*/
-
-
 header {
     background-color: white;
     color: rgb(190, 40, 40);
@@ -48,7 +46,6 @@ header {
 
 
 /*Body*/
-
 body {
     font-family: 'Courier New';
     display: flex;
@@ -58,7 +55,7 @@ body {
     min-height: 100vh; /* 100% of the viewport height */
   }
 
-  h3 {
+  h2 {
     margin-bottom: 10px;
     text-align: center;
   }
@@ -75,16 +72,16 @@ body {
     display: flex;
     align-items: center;
     height: 80vh; 
-    margin-block:260px 50px;
+    margin-block:280px 50px;
     flex-direction: column;
     }
     
     .projects_container {
     /*background-color: #f0f0f0;*/
     padding: 50px;
+    margin-block: 50px 100px;
     /*border: 1px solid #ccc;*/
     } 
-    
     
     .publications_container {
     /*background-color: #f0f0f0;*/
@@ -92,6 +89,4 @@ body {
     margin-block: 50px 100px;
     }
     
-
-
 /*Footer*/
