@@ -69,11 +69,12 @@ body {
 
 /*Main*/
   .central_container {
-  display: flex;
-  align-items: center;
-  height: 80vh; 
-  margin-block:280px 50px;
-  flex-direction: column;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block:280px 50px;
+    flex-direction: column;
   }
   
   .section_container {
@@ -85,11 +86,9 @@ body {
   
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Divide into two equal columns */
-    grid-template-rows: 1fr 1fr; /* Divide into two equal rows */
+    grid-template-columns: 600px 600px; /* Divide into two equal columns */
+    grid-template-rows: 400px 400px; /* Divide into two equal rows */
     gap: 20px; /* Add spacing between boxes */
-    /* add to limit box size */
-    max-height: 500;max-width: 1300;
     }
  
   .text-container {
