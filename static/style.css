@@ -46,25 +46,10 @@ header {
 
 
 /*Body*/
-body {
-    font-family: 'Courier New';
-    display: flex;
-    /*flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* 100% of the viewport height */
-  }
-
-  h2 {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  p {
-    margin-bottom: 3px;
-    font-style: italic;
-    font-weight: lighter;
-  }
+/*Body*/
+body {font-family: 'Courier New';display: flex; flex-direction: column; }
+h2 {margin-bottom: 30px;text-align: center;}
+p {margin-bottom: 3px;font-style: italic;font-weight: lighter;}
 
 
 /*Main*/
@@ -92,7 +77,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    }
+  }
  
   .text-container {
   flex: 1; /* Flex-grow: 1 to take up available space */
