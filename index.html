@@ -25,12 +25,17 @@
     /*Main*/
     .intro_container {height: 100vh; display: flex;justify-content: center;align-items: center;margin-block:50px 150px;flex-direction: column;}
     /*projects*/
-    .container {display: grid;grid-template-columns: repeat(2, 600px); grid-template-rows: repeat(2, 400px); grid-gap: 20px;justify-content: center;align-items: center;margin: 10 auto;}
+    .container {display: grid;grid-template-columns: repeat(2, 600px); justify-content: center;align-items: center;grid-gap:20px;
+      margin: 0 auto;padding:30px;margin-top:20px}
+      /* not necessary for now*/ 
     .text-container {flex: 1;padding: 20px;text-align:left;}
     .image-container {flex: 1;padding: 20px;text-align:center;margin: 0 auto;}
-    .box {border: 1px #0c0c0c; background-color: #b3b2b2; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);}
+    .box {border: 1px #0c0c0c; background-color: #c7c5c5; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);}
     /*publications and presentations containers*/  
-    .publications_container{justify-content: center;align-items: center;max-width: 1300px;margin:0 auto;height: 100vh; }
+    .publications_container{justify-content: center;align-items: center;max-width: 1300px;margin:0 auto;padding:30px; }
+
+    /* apply to all sections to deals with margins*/
+    .section_container{margin-block:20px 20px ;}
 
   </style>
     
@@ -75,7 +80,7 @@
             <h3><span style="color:red">Hearing data</span></h3>
             <p>Flask web app for online hearing clinic database analysis. The analysis is able to predict the number of customers for the next year.</p> 
             <p> Tools used : Flask - Pandas - Numpy - scikit-Learn - prophet</p>
-            <p> This app is used for Enfants sourds du Cambodge NGO data analysis.</p>
+            <p> This app is also used for Enfants sourds du Cambodge NGO data analysis.</p>
           </div>
         </div> 
 
@@ -104,13 +109,14 @@
           <div class="box">
             <h3>MEMAUDATA</h3>
             <p>Web plateform to analyze online audiological questionnaires. Open-source. On-going project.</p> 
-            <p> Tools used : WordPress - Gravity form.</p>
+            <p> Developped under: WordPress - Gravity form.</p>
           </div>
       </div> 
     </section> 
   
     <section id="Publications" class="section_container">
       <div class ="publications_container">
+        <h2> Publications</h2>
         <b>Publications in journal with a peer review committee</b>
         <br>
         <ul>
