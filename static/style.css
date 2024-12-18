@@ -61,14 +61,14 @@ body {
   }
 
   p {
-    margin-bottom: 7px;
+    margin-bottom: 3px;
     font-style: italic;
     font-weight: lighter;
   }
 
 
 /*Main*/
-.central_container {
+  .central_container {
   display: flex;
   align-items: center;
   height: 80vh; 
@@ -83,6 +83,13 @@ body {
   /*border: 1px solid #ccc;*/
   } 
   
+  .all_projects_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide into two equal columns */
+    grid-template-rows: 1fr 1fr; /* Divide into two equal rows */
+    gap: 20px; /* Add spacing between boxes */
+    max-height: fit-content;
+    }
  
   .text-container {
   flex: 1; /* Flex-grow: 1 to take up available space */
@@ -98,13 +105,7 @@ body {
   }
 
 
-  .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Divide into two equal columns */
-  grid-template-rows: 1fr 1fr; /* Divide into two equal rows */
-  gap: 20px; /* Add spacing between boxes */
-  max-height: fit-content;
-  }
+ 
 
   .box {
   border: 1px solid black;
