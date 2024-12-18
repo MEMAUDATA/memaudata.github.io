@@ -89,4 +89,9 @@ body {
     margin-block: 50px 100px;
     }
     
+    .single_project_container {
+      border: 1px solid #0c0c0c;
+
+    }
+
 /*Footer*/
