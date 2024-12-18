@@ -78,7 +78,6 @@ body {
   
   .section_container {
   /*background-color: #f0f0f0;*/
-  padding: 50px;
   margin-block: 50px 100px;
   /*border: 1px solid #ccc;*/
   } 
@@ -103,9 +102,6 @@ body {
   padding: 20px;
   margin: 0 auto;
   }
-
-
- 
 
   .box {
   border: 1px solid black;
