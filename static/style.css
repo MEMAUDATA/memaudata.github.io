@@ -56,7 +56,7 @@ body {
   }
 
   h2 {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     text-align: center;
   }
 
@@ -87,6 +87,8 @@ body {
     grid-template-columns: 1fr 1fr; /* Divide into two equal columns */
     grid-template-rows: 1fr 1fr; /* Divide into two equal rows */
     gap: 20px; /* Add spacing between boxes */
+    /* add to limit box size */
+    max-height: 500;max-width: 1300;
     }
  
   .text-container {
