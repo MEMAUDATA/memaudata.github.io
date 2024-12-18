@@ -5,20 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nicolas Vannson</title>
     <link rel="icon"  href="/static/favicon-violet.png">
-    <link rel="stylesheet" href="../static/style.css"> 
   </head>
-   
-    
 
-<!-- Add to CSS
-  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-/*@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }} */ -->
-    
 
+  <style>
+    /*Nav*/
+    header {background-color: white;color: rgb(190, 40, 40);padding: 20px;font-family: 'Courier New';font-style: italic;font-weight: lighter;
+    position: absolute;top: 0;right: 0;}  
+    header nav {float: right;}
+    header nav ul {list-style-type: none;margin: 0;padding: 0;}
+    header nav li {float: left;}
+    header nav li a {display: block;color: black;text-align: center;padding: 14px 16px;text-decoration: none;}
+      
+    /*Body*/
+    body {font-family: 'Courier New';display: flex; flex-direction: column; }
+    h2 {margin-bottom: 30px;text-align: center;}
+    p {margin-bottom: 3px;font-style: italic;font-weight: lighter;}
+
+    /*Main*/
+    .intro_container {height: 100vh; display: flex;justify-content: center;align-items: center;margin-block:50px 150px;flex-direction: column;}
+    /*projects*/
+    .container {display: grid;grid-template-columns: repeat(2, 600px); grid-template-rows: repeat(2, 400px); grid-gap: 20px;justify-content: center;align-items: center;margin: 10 auto;}
+    .text-container {flex: 1;padding: 20px;text-align:left;}
+    .image-container {flex: 1;padding: 20px;text-align:center;margin: 0 auto;}
+    .box {border: 1px #0c0c0c; background-color: #b3b2b2; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);}
+    /*publications and presentations containers*/  
+    .publications_container{justify-content: center;align-items: center;max-width: 1300px;margin:0 auto;height: 100vh; }
+
+  </style>
+    
 
   <body>
   <!--Nav bar -->
@@ -54,7 +69,7 @@
         <!-- Box 1:  HEARING DATA--> 
         <div class="box">
           <div class="image-container">
-            <img src="static/hearingdata.png" width="600" height="300" alt="MEMAU landing page" >
+            <img src="static/hearingdata.png" width="300" height="150" alt="MEMAU landing page" >
           </div>
           <div class="text-container">
             <h3><span style="color:red">Hearing data</span></h3>
@@ -67,7 +82,7 @@
         <!-- Box 2 : MEMAU --> 
         <div class="box">
           <div class="image-container">
-            <img src="static/site-memau.png" width="600" height="300" alt="MEMAU landing page" >
+            <img src="static/site-memau.png" width="300" height="150" alt="MEMAU landing page" >
           </div>
           <div class="text-container">
             <h3>MEMAU</h3>
