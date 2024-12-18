@@ -73,7 +73,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-block:280px 50px;
+    margin-block:350px 50px;
     flex-direction: column;
   }
   
@@ -81,14 +81,16 @@ body {
   /*background-color: #f0f0f0;*/
   margin-block: 50px 100px;
   /*border: 1px solid #ccc;*/
-  max-height: 500;max-width: 1300;
+
   } 
   
   .container {
     display: grid;
-    grid-template-columns: 600px 600px; /* Divide into two equal columns */
+    grid-template-columns: 600px 600px ; /* Divide into two equal columns */
     grid-template-rows: 400px 400px; /* Divide into two equal rows */
-    gap: 20px; /* Add spacing between boxes */
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
     }
  
   .text-container {
