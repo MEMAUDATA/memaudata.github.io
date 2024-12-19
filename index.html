@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nicolas Vannson</title>
-    <link rel="icon"  href="static/apple-touch-icon.png">
+    <link rel="icon"  href="static/nicobardenas.png">
   </head>
 
 
@@ -23,7 +23,7 @@
     p {margin-bottom: 3px;font-style: italic;font-weight: lighter;}
 
     /*Main*/
-    .intro_container {height: 100vh; display: flex;justify-content: center;align-items: center;margin-block:50px 150px;flex-direction: column;}
+    .intro_container {height: 100vh; display: flex;justify-content: center;align-items: center;margin-block:20px 150px;flex-direction: column;}
     /*projects*/
     .container {display: grid;grid-template-columns: repeat(2, 600px); justify-content: center;align-items: center;grid-gap:20px;
       margin: 0 auto;padding:30px;margin-top:20px}
@@ -56,6 +56,9 @@
   <main>
 
     <section  class="intro_container">
+       <!-- Img de Nico -->
+      <img src="static/nicogwada.jpeg" alt="Nico" width="200" height="200" style="border-radius: 40px;">
+
       <h2>Nicolas Vannson</h2>
       <p>Ph.D. in Neuroscience.</p>
       <p>I'm a former audiologist and currently a data science and teaching enthusiast.</p>
@@ -74,13 +77,14 @@
         <!-- Box 1:  HEARING DATA--> 
         <div class="box">
           <div class="image-container">
-            <img src="static/hearingdata.png" width="400" height="200" alt="Hearingdata landing page" >
+            <img src="static/streamlit.png" width="400" height="200" alt="Hearingdata landing page" >
           </div>
           <div class="text-container">
             <h3><span style="color:red">Hearing data</span></h3>
-            <p>Flask web app for online hearing clinic database analysis. The analysis is able to predict the number of customers for the next year.</p> 
-            <p> Tools used : Flask - Pandas - Numpy - scikit-Learn - prophet</p>
-            <p> This app is also used for Enfants sourds du Cambodge NGO data analysis.</p>
+            <p> Web app for online hearing clinic database analysis. Customers' prediction for the next year.</p> 
+            <p> Tools used : Flask/Streamlit - Pandas - Numpy - scikit-Learn - prophet</p>
+            <p> App used also for NGO Enfants sourds du Cambodge</p>
+            <p><a href="https://hearingdata.streamlit.app/" target="_blank">hearingdata.streamlit.app</a></p> 
           </div>
         </div> 
 
