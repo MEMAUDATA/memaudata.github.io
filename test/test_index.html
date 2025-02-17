@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TEST INDEX</title>
+    <link rel="icon"  href="static/nicobardenas.png">
+  </head>
+  <style>
+    /*container
+    https://laconsole.dev/blog/guide-creer-conteneurs-css/*/
+    /*Nav*/
+    header {background-color: white;color: rgb(190, 40, 40);padding: 20px;font-family: 'Courier New';font-style: italic;font-weight: lighter;
+    position: absolute;top: 0;right: 0;}  
+    header nav {float: right;}
+    header nav ul {list-style-type: none;margin: 0;padding: 0;}
+    header nav li {float: left;}
+    header nav li a {display: block;color: black;text-align: center;padding: 14px 16px;text-decoration: none;}
+      
+    /*Body*/
+    body {font-family: 'Courier New';display: flex; flex-direction: column; }
+    h2 {margin-bottom: 30px;text-align: center;}
+    p {margin-bottom: 3px;font-style: italic;font-weight: lighter;}
+
+    /*Main*/
+    .intro_container {height: 100vh; display: flex;justify-content: center;align-items: center;margin-block:20px 150px;flex-direction: column;}
+    /*projects*/
+    .container {display: grid;grid-template-columns: repeat(3, 400px); justify-content: center;align-items: center;grid-gap:20px;
+      margin: 0 auto;padding:30px;margin-top:20px}
+      /* not necessary for now*/ 
+    .text-container {flex: 1;padding: 20px;text-align:left;}
+    .image-container {flex: 1;padding: 5px;text-align:center;margin: 0 auto;}
+    .box {border: 1px #0c0c0c; background-color: #c7c5c5; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);}
+    /*publications and presentations containers*/  
+    .publications_container{justify-content: center;align-items: center;max-width: 1300px;margin:0 auto;padding:30px; }
+
+    /* apply to all sections to deals with margins*/
+    .section_container{margin-block:20px 20px ;}
+
+  </style>
+    
+
+  <body>
+  <!--Nav bar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#Projects">Data science projects and not</a></li>
+        <li><a href="#Publications">Publications</a></li>
+        <li><a href="#Presentations">Selection of presentations</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main text presentation -->
+  <main>
+
+    <section  class="intro_container">
+       <!-- Img de Nico -->
+      <img src="static/nicogwada.jpeg" alt="Nico" width="200" height="200" style="border-radius: 40px;">
+
+      <h2>Nicolas Vannson</h2>
+      <p>Ph.D. in Neuroscience.</p>
+      <p>I'm a former audiologist and currently a data science and teaching enthusiast.</p>
+      <p></p>
+      <!-- Small spaces for a logo-->
+      <!-- Linkedin logo-->
+      <a href="https://www.linkedin.com/in/nicolas-vannson-phd/" target="_blank">
+        <img src="static/linkedin-logo-dark-blue.png" alt="LinkedIn" width="25" height="25">
+      </a>
+      <p></p>
+      <p>
+      "Find a job you enjoy doing, and you will never have to work a day in your life."
+      </p>
+      <p>- Mark Twain - </p>
+
+     
+      
+
+
+    </section>
+
+    <!-- Add chapter below which are CV sections--> 
+    <section id="Projects" class="section_container">
+      <h2><span style="color:red">Data science projects <span style="color:rgb(0, 0, 0)"> and not </span> </h2>
+      <div class="container">
+        <!-- Box 1:  HEARING DATA--> 
+        <div class="box">
+          <div class="image-container">
+            <img src="static/streamlit.png" width="400" height="200" alt="Hearingdata landing page" >
+          </div>
+          <div class="text-container">
+            <h3><span style="color:red">Hearing data</span></h3>
+            <p> Web app for online hearing clinic database analysis. Customers' prediction for the next year.</p> 
+            <p> Tools used : Flask/Streamlit - Pandas - Numpy - scikit-Learn - prophet</p>
+            <p> App used also for NGO Enfants sourds du Cambodge</p>
+            <p><a href="https://hearingdata.streamlit.app/" target="_blank">hearingdata.streamlit.app</a></p> 
+          </div>
+        </div> 
+
+        <!-- Box 2 : MEMAU --> 
+        <div class="box">
+          <div class="image-container">
+            <img src="static/site-memau.png" width="400" height="200" alt="MEMAU landing page" >
+          </div>
+          <div class="text-container">
+            <h3>MEMAU</h3>
+            <p>Web platform dedicated to audiology, primiraly designed to help students for their final years project. 
+              Core functionnalities : ressources librairy, questionnaires, tools for statistics and bibliography.Open-source.</p> 
+            <p> Developped under Wordpress and Divi.</p>
+            <p><a href="https://www.memau.eu" target="_blank">memau.eu</a></p>
+          </div>
+        </div> 
+
+        <!-- Box 5 : MEMAUDATA --> 
+        <div class="box">
+          <div class="image-container">
+            <img src="static/NBA.png" width="400" height="200" alt="NBA landing page" >
+          </div>
+          <h3><span style="color:red">Investment model for NBA players</span></h3>
+          <p>ML processing. Based upon a NBA's player dataset, I had to find the best features (i.e: characteristics) for theoretical investment decision.</p> 
+          <p>Tools used : Flask - pandas - numpy - scikit-learn - seaborn - scipy </p>
+          <p> <a href="nba.html" target="_blank" > see jupiter notebook</a></p>
+        </div>
+
+
+        
+        <!-- Box 5 : ESC  --> 
+        <div class="box">
+          <div class="image-container">
+            <img src="static/ESC.png" width="400" height="200" alt="ESC landing page" >
+          </div>
+          <h3>NGO: Enfants sourds du Cambodge </h3>
+          <p>As a member of ESC NGO, I've designed, created and I'm the webmaster.</p> 
+          <p>Tool used : Wordpress </p>
+          <p> <a href="https://www.enfantssourdsducambodge.eu/" target="_blank" > ESC website</a></p> 
+        </div>
+
+         <!-- Box 3 : AUDIODETECT --> 
+         <div class="box">
+          <h3><span style="color:red">Audiodetect</span></h3>
+            <p>Audiogram detection and data storage using the webcam. On-going project.</p> 
+            <p> Tools used : Pytorch - Pandas.</p>
+        </div> 
+
+          <!-- Box 4 : MEMAUDATA --> 
+          <div class="box">
+            <h3>MEMAUDATA</h3>
+            <p>Web plateform to analyze online audiological questionnaires. Open-source. On-going project.</p> 
+            <p> Developped under: WordPress - Gravity form.</p>
+          </div>
+
+
+            
+
+
+
+      </div> 
+    </section> 
+  
+    <section id="Publications" class="section_container">
+      <div class ="publications_container">
+        <h2> Publications</h2>
+        <b>Publications in journal with a peer review committee</b>
+        <br>
+        <ul>
+          <li>Berger T.,  <b>Vannson N.</b> (in prep, 2025). <i>Assessment of psychological distress and thymia in newly fitted presbyacusic patients.</i></li>
+          <li>Mazet M., Enzler F.,  <b>Vannson N.</b> (in prep, 2025). <i>Pediatric speech-in-noise audiometry tests with standardized background noise: Systematic review of the literature.</i></li>
+            <li>Gransagne C., <b>Vannson N.</b> (2024). <i>Comparison of Class I and Class II hearing aids in patients with severe hearing loss.</i> Canadian Acoustics, 2024, vol. 52, no 3.</li>
+            <li> <b>Vannson N.</b>, Kauramaki J., Strelnikov K., Deguine O., Schönwiesner M., Barone P. (submitted 2024). <i>Long-term adaptation to cochlear implant simulation: A behavioral and EEG study.</i></li>
+            <li>Brazeau P., Spella P.,  <b>Vannson N.</b> (2024). <i>Evaluation of the evolution of cognition in presbycusis patients.</i> Revue de Geriatrie,49(5),273-82.</li>
+            <li>Mandin C., Spella P.,  <b>Vannson N.</b> (2024). <i>Study of the impact of hearing aid rehabilitation on self-esteem in presbycusis patients with first-time hearing aids.</i> Revue de Geriatrie,49(2),83-94.</li>
+            <li>Alzaher M.,  <b>Vannson N.</b>, Deguine O., Marx M., Barone P.,Strelnikov K. (2021). <i>Brain plasticity and hearing disorders.</i> Revue neurologique, 177(9), 1121-1132.</li>
+            <li> <b>Vannson N.</b>, Strelnikov, K., James J., C., Deguine, O., Barone, P., Marx, M. (2020). <i>Evidence of a functional reorganization in the auditory dorsal stream following unilateral hearing loss.</i> Neuropsychologia, 149, 107683.</li>
+            <li> <b>Vannson N.</b>, James, C., Fraysse, B., Strelnikov, K., Deguine, O., Marx, M., Barone, P. (2017). <i>Speech-in-noise perception in unilateral hearing loss: Relation to pure-tone thresholds and brainstem plasticity.</i> Neuropsychologia, 102, 135-143.</li>
+            <li> <b>Vannson N.</b>, (2016). <i>Unilateral hearing loss : Psychoacoustic, quality of life questionnaires and neuroimagning (fMRI) approaches.</i> (Doctoral dissertation),Université Toulouse III-Paul Sabatier.</li>
+            <li> <b>Vannson N.</b>, James, C., Fraysse, B., Strelnikov, K., Barone, P., Deguine, O.,Marx, M. (2015). <i>Quality of Life and Auditory Performance in Adults with Asymmetric Hearing Loss.</i> Audiology and Neurotology.</li>
+            <li> <b>Vannson N.</b>, Innes-Brown, H., Marozeau, J. (2015). <i>Dichotic Listening Can Improve Perceived Clarity of Music in Cochlear Implant Users.</i> Trends in Hearing.</li>
+        </ul>
+            <b>Publications in journal without a peer review committee</b>
+        <ul>
+          <li><b>Vannson N.</b>, Innes-Brown, H., Marozeau, J. (2018). <i>L‘écoute dichotique chez un sujet implanté cochléaire peut améliorer la perception de la clarté de la musique.</i> Revue ACFOS, numéro 60. </li>
+          <li>Deguine, O., <b>Vannson N.</b>, Molinier, C., Marx, M., Lescure, B., Barone, P. (2014). <i>Évaluation du handicap perceptif après surdité unilatérale : évaluation psychoacoustique et qualité de vie.</i> Annales françaises d’Oto-rhino-laryngologie et de Pathologie Cervico-faciale.</li>
+        </ul> 
+      </div>   
+    </section>
+
+    <!-- Use same parameters for this sections--> 
+    <section id="Presentations" class="section_container">
+      <div class="publications_container"> 
+        <h2>Selection of presentations</h2>
+        <ul>
+          <li><b>01/2025</b>. Brussels - <b>Belgium</b>.<i> Unilateral hearing loss</i></li>
+          <li><b>12/2020</b>. Regional professional meeting of Audiologists and speech therapists - Toulouse - <b>France</b>.<i> Audiological evaluations</i> </li>
+          <li><b>11/2019</b>. AFON - Dijon - <b>France</b>.<i> Evaluation of the perceptual handicap after unilateral hearing loss. Psychoacoustic and fMRI approaches.</i>  </li>
+          <li><b>06/2017</b>. Poster. Neuroscience and Music VI - Boston - <b>USA</b>.<i> Evaluation of the perceptual handicap after unilateral hearing loss. Psychoacoustic and fMRI approaches.</i>  </li>
+          <li><b>09/2015</b>. 1st Otology and Neurotology French association conference day - Paris- <b>France</b>.<i> Evaluation of the perceptual handicap after unilateral hearing loss. Psychoacoustic and fMRI approaches.</i> </li>
+          <li><b>07/2015</b>. Poster - CIAP. Lake Tahoe, CA - <b>USA</b>.<i> Evaluation of the perceptual handicap after unilateral hearing loss. Psychoacoustic and Quality of life approaches.</i>  </li>
+          <li><b>04/2015</b>. 6th International audiology workshop - Clermont-Ferrand - <b>France</b>.<i> Evaluation of the perceptual handicap after unilateral hearing loss. Psychoacoustic and Quality of life approaches.</i>  </li>
+          <li><b>10/2014</b>. ENT National French congress - Paris - <b>France</b>.<i> Evaluation of the perceptual handicap after unilateral hearing loss. Psychoacoustic and Quality of life approaches.</i>  </li>
+          <li><b>10/2012</b>. BRAMS - Montreal - <b>Canada</b>. <i>Enhancement of music perception for cochlear implant recipients</i>  </li>
+          <li><b>08/2012</b>. Bionics Institute - Melbourne - <b>Australia</b>.<i> Inner hair cell innervation from confocal images</i>  </li>
+          <li><b>05/2012</b>. The Music Performance and Perception Research Day - Sydney - <b>Australia</b>.<i> Enhancement of music perception for cochlear implant recipients</i>  </li>
+        </ul>
+      </div>
+    </section> 
+  
+  </main>
+ 
+
+  <!-- Footer -->  
+  <footer>
+  </footer>
+  </body>

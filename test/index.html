@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>NBA</title>
+        
+        <!-- add icon link -->
+        <link rel="icon" href=
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Isolated_basketball.png/600px-Isolated_basketball.png?20121214161940"
+        type="image/x-icon" 
+        />
+        
+        <!--- internal CSS style for this short example --->
+        <!--- MPdata blue  #3159FF --->  
+        
+        <style>
+        
+        .tbox {
+          margin: 10px;
+          padding:10px; 
+                }
+        
+               
+        .box {
+        
+          background-color: #2da1ff ;  
+          color: white;
+          margin: 10px;
+          padding: 20px; 
+          width: 250px;
+  		    height: 100px;
+        }
+             
+        </style>
+    
+    </head>
+
+<!--- Body --->
+<body>
+
+    <div class="tbox">
+      <h2> Investment</h3>
+      <p> Enter NBA's single player stats</p>
+    </div>
+
+    <!--- Make it a bit sexier  --->
+    <!--- FORM  SECTION --->
+    <div class="box">
+    <table> 
+       <form  action="http://127.0.0.1:5000" method="POST" target="_self">
+       <tr> <td> <label for="name"> GP </label> </td> 
+           <td><input type="text" name="GP" value=" "/></td> 
+       </tr> 
+       <tr> <td> <label for="name"> FG% </label> </td> 
+        <td><input type="text" name="GP" value=" "/></td> 
+        </tr> 
+        <tr> <td> <label for="name"> FTM </label> </td> 
+          <td><input type="text" name="GP" value=" "/></td> 
+        </tr>
+        <tr> <td> <label for="name"> FTA </label> </td> 
+          <td><input type="text" name="GP" value=" "/></td> 
+      </tr>  
+       </form> 
+       
+       </table> 
+      </div class="box">
+
+    <!--- OUTPUT SECTION --->
+    <div class="tbox">
+      <label for="fname">Invest ?</label><br>
+      <p>{{ output }}</p>
+    </div class="box">
+
+  </body>
+</html>
+
