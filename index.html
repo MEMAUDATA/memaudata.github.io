@@ -19,25 +19,25 @@
       
     /*Body*/
     body {font-family: 'Courier New';display: flex; flex-direction: column; }
-    h2 {margin-bottom: 30px;text-align: center;margin-top:30px}
+    h2 {margin-bottom: 50px;text-align: center;margin-top:30px}
     p {margin-bottom: 3px;font-style: italic;font-weight: lighter;}
 
     /*Main*/
     .intro_container {height: 100vh; display: flex;justify-content: center;align-items: center;margin-block:20px 150px;flex-direction: column;}
     /*projects*/
-    .container {display: grid;grid-template-columns: repeat(2, 500px); justify-content: center;align-items: center;grid-gap:20px;
-      margin: 0 auto;padding:30px;margin-top:20px;}
+    .container {display: grid;grid-template-columns: repeat(3, 500px);justify-content: center;align-items: center;grid-gap:20px;
+      margin: 0 auto;padding:20px;margin-top:20px;}
       /* not necessary for now*/ 
     .text-container {flex: 1;padding: 10px;text-align:center;}
     .image-container {flex: 1;padding: 5px;text-align:center;}
-    .box {border: 1px #0c0c0c; background-color: #d5d1d1; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);max-height: fit-content;}
+    .box {border: 1px #0c0c0c;height: 350px; background-color: #ddd4d4; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);max-height: fit-content;}
     /*publications and presentations containers*/  
     .publications_container{justify-content: center;align-items: center;max-width: 1300px;margin:0 auto;padding:30px; }
 
     /* apply to all sections to deals with margins*/
-    .section_container{margin-block:20px 20px ;}
+    .section_container{margin-block:30px 30px ;padding-top: 40px;}
 
-
+ /*#d5d1d1 form grey */
 
   </style>
     
@@ -59,7 +59,7 @@
 
     <section  class="intro_container">
        <!-- Img de Nico -->
-      <img src="static/nicogwada.jpeg" alt="Nico" width="200" height="200" style="border-radius: 40px;">
+      <img src="static/nicogwada.jpeg" alt="Nico" width="250" height="250" style="border-radius: 40px;">
 
       <h2>Nicolas Vannson</h2>
       <p>Ph.D. in Neuroscience.</p>
@@ -68,7 +68,7 @@
       <!-- Small spaces for a logo-->
       <!-- Linkedin logo-->
       <a href="https://www.linkedin.com/in/nicolas-vannson-phd/" target="_blank">
-        <img src="static/linkedin-logo-dark-blue.png" alt="LinkedIn" width="25" height="25">
+        <img src="static/linkedin-logo-dark-blue.png" alt="LinkedIn" width="30" height="30">
       </a>
     
 
@@ -82,12 +82,12 @@
         <!-- Box 1:  HEARING DATA--> 
         <div class="box">
           <div class="image-container">
-            <img src="static/DS.png" width="150" height="150" >
+            <img src="static/DS.png" width="100" height="100">
           </div>
           <div class="text-container">
             <h3><span style="color:red">Hearing data</span></h3>
             <p> Web app for online hearing clinic database analysis. Customers' prediction for the next year.</p> 
-            <p> Tools used : Flask/Streamlit - Pandas - Numpy - scikit-Learn - prophet</p>
+            <p> Tools used : Flask/ Streamlit / Pandas / Numpy / Scikit-Learn / Prophet</p>
             <p><a href="https://hearingdata.streamlit.app/" target="_blank">hearingdata</a></p> 
           </div>
         </div> 
@@ -95,14 +95,14 @@
         <!-- Box 2 : MEMAU --> 
         <div class="box">
           <div class="image-container">
-            <img src="static/web.png" width="150" height="150">
+            <img src="static/web.png" width="100" height="100">
           </div>
           <div class="text-container">
             <h3>MEMAU</h3>
             <p>Web platform designed to help students for their final years project in audiology. 
               Core functionnalities : ressources librairy, questionnaires, tools for statistics... </p> 
-            <p> Tools used : Wordpress and Divi.</p>
-            <p><a href="https://www.memau.eu" target="_blank">memau.eu</a></p>
+            <p> Tools used : Wordpress and Divi</p>
+            <p><a href="https://www.memau.eu" target="_blank">MEMAU</a></p>
           </div>
         </div> 
 
@@ -110,12 +110,11 @@
          <!-- Box 5 : ESC  --> 
          <div class="box">
           <div class="image-container">
-            <img src="static/web.png" width="150" height="150">
+            <img src="static/web.png" width="100" height="100">
           </div>
           <div class="text-container">
             <h3>NGO: Enfants sourds du Cambodge </h3>
-            <p>As a member of ESC NGO, I've designed and created the website. I'm also the webmaster.</p> 
-            <p> This website was designed to recruit future members and to report our actions.</p>
+            <p> This website serves as a platform for reporting our activities, recruiting prospective members, and facilitating fundraising initiatives.</p>
             <p>Tool used : Wordpress </p>
             <p> <a href="https://www.enfantssourdsducambodge.eu/" target="_blank" > ESC website</a></p> 
           </div>
@@ -126,30 +125,31 @@
         <!-- Box 5 : ML NBA --> 
         <div class="box">
           <div class="image-container">
-            <img src="static/DS.png" width="150" height="150" >
+            <img src="static/DS.png" width="100" height="100" >
           </div>
           <div class="text-container">
             <h3><span style="color:red">Features selection for investment decision</span></h3>
-            <p>ML processing. Based upon a NBA's player dataset, I had to find the best features (i.e: characteristics) for theoretical investment decision.</p> 
-            <p>Tools used : Flask - pandas - numpy - scikit-learn - seaborn - scipy </p>
-            <p> <a href="nba.html" target="_blank" > see jupiter notebook</a></p>
+            <p> Features selection for theoretical investment decision for NBA players.</p> 
+            <p>Tools used : Flask / Pandas / Numpy / scikit-learn / Seaborn / Scipy </p>
+            <p> <a href="nba.html" target="_blank" > Notebook</a></p>
           </div>
         </div>
 
         <!-- Box 4 : MEMAUDATA --> 
         <div class="box">
           <div class="image-container">
-            <img src="static/web.png" width="150" height="150" alt="MEMAU landing page" >
+            <img src="static/web.png" width="100" height="100" >
           </div>
           <div class="text-container">
             <h3>MEMAUDATA</h3>
             <p>Web plateform to analyze online audiological questionnaires. On-going project.</p> 
-            <p> Tools used : WordPress - Gravity form.</p>
+            <p> Tools used : WordPress / Gravity form</p>
+            <p><a href="https://data.memau.eu/" target="_blank">MEMAUDATA</a></p>
         </div>
       </div>
 
 
-         <!-- Box 3 : AUDIODETECT --> 
+         <!-- Box 3 : AUDIODETECT : Not finished
          <div class="box">
           <div class="image-container">
             <img src="static/DS.png" width="150" height="150" alt="MEMAU landing page" >
@@ -158,6 +158,47 @@
             <h3><span style="color:red">Audiodetect</span></h3>
               <p>Audiogram detection and data storage using the webcam. On-going project.</p> 
               <p> Tools used : Pytorch - Pandas.</p>
+          </div>
+        </div> -->
+
+        <!-- KROK --> 
+        <div class="box">
+          <div class="image-container">
+            <img src="static/DS.png" width="100" height="100"  >
+          </div>
+          <div class="text-container">
+            <h3><span style="color:red">Confidential compagny</span></h3>
+              <p> Annual income analysis for outlier detection and forecasting future income trends.</p> 
+              <p> Tools used : Prophet / Pandas / Seaborn </p>
+          </div>
+        </div> 
+
+         <!-- Garbage --> 
+         <div class="box">
+          <div class="image-container">
+            <img src="static/DS.png" width="100" height="100"  >
+          </div>
+          <div class="text-container">
+            <h3><span style="color:red">Computer Vision</span></h3>
+              <p> Garbage detection using 3 different approaches : Pytorch / TensorFlow / Neural Network manually designed. </p> 
+              <p> Tools used : Pytorch / TensorFlow / Keras / Numpy</p>
+              <!-- <p> <a href=" " target="_blank" > Notebook</a></p> --> 
+          </div>
+        </div> 
+
+        <!-- More to come ... --> 
+        <div class="box">
+          <div class="text-container">
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <p> To be continued. Stay tuned  :)! </p> 
+              <!-- <p> <a href=" " target="_blank" > Notebook</a></p> --> 
           </div>
         </div> 
 
