@@ -1,4 +1,4 @@
-Personnal webpage to add on a CV in order to show my carrer path and my data scientist skills.
+Personnal webpage in order to depict my career path and my data scientist skills.
 
 Creation : NV, Toulouse, Dec 2024 
 
