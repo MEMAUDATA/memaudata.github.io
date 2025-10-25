@@ -41,6 +41,10 @@
 
     .box {border: 1px #0c0c0c; background-color: #478aa4; padding: 20px; border-radius: 5px; min-height: 250px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3)} /*#d5d1d1 form grey  #1792c3 blue #428ba8*/
+    
+    .boxhobbies {border: 0px #0c0c0c; background-color: white; padding: 20px; border-radius: 5px; min-height: 250px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0)} /*#d5d1d1 form grey  #1792c3 blue #428ba8*/
+      
 
     /*publications and presentations containers*/  
     .publications_container{justify-content: center;align-items: center;max-width: 1300px;margin:0 auto;padding:30px; }
@@ -49,7 +53,7 @@
     .section_container{margin-block:30px 30px ;padding-top: 40px;}
 
     /* link : go back to top of the page */
-    .top{text-align: center}
+    .top{text-align: center;font-size: 0.85em}
 
  
   /* Responsive section for adjustments */
@@ -88,7 +92,8 @@
     .text-container {font-size: 0.85em}
     .image-container img {padding:10px;margin : 5px 0;max-width: 100%;height: auto;box-sizing: border-box;object-fit: contain;}    
     .publications_container{font-size: 0.85em;}
-    .box {min-height: 260px;} 
+    .box,.boxhobbies {min-height: 260px;}
+
 
   }
 
@@ -118,7 +123,7 @@
 
     /*.menu-toggle {display: None;}*/
     .container {max-width: 88em;}
-    .box {min-height: 400px; flex: 1}   
+    .box,boxhobbies{min-height: 400px; flex: 1}   
 }
 
 
@@ -412,42 +417,37 @@
         <h2> Hobbies </span> </h2>
         <div class="container">
   
-          <!-- HEARING DATA--> 
-          <div class="box">
-            <div class="image-container">
-              <img src="static/hobby2.png" width="100" height="100" alt = 'hobby'>
-            </div>
-            <div class="text-container">
-              <h3>Associative </h3>
-              <p>Founder of <a href="https://memau.eu/" target="_blank" >MEMAU</a>  and <a href="https://data.memau.eu/" target="_blank" >MEMAUDATA</a><br> Web platforms dedicated to help audiological students and professionnals. </p>
-              <p>NGO : Webmaster & Data scientist of <a href="https://www.enfantssourdsducambodge.eu/" target="_blank" >Enfants Sourds du Cambodge</a><br>NGO dealing with hearing aid fitting in Cambodia for blind/hearing impaired children. </p>
-            </div>
-          </div> 
-          <div class="box">
+          <div class="boxhobbies">
             <div class="image-container">
               <img src="static/hobby2.png" width="100" height="100" alt = 'hobby'>
             </div>
             <div class="text-container">
               <h3>Sports </h3>
-              <p> Handball/football/ Skiing/ Snowboarding/Climbing (Bouldering)/squash</p> 
+              <p> Handball/football/Skiing/Snowboarding/Bouldering/squash</p> 
             </div>
           </div> 
-          <div class="box">
+
+          <div class="boxhobbies">
+            <div class="image-container">
+              <img src="static/hobby2.png" width="100" height="100" alt = 'hobby'>
+            </div>
+            <div class="text-container">
+              <h3>Associative </h3>
+              <p>Founder of both MEMAU & MEMAUDATA</a>
+              <br>Webmaster & Data scientist of Enfants Sourds du Cambodge</p>
+            </div>
+          </div> 
+          
+          <div class="boxhobbies">
             <div class="image-container">
               <img src="static/hobby2.png" width="100" height="100" alt = 'hobby'>
             </div>
             <div class="text-container">
               <h3>Other </h3>
-              <p> Homebrewer and improvisation (theater).</p> 
+              <p> Homebrewer and improvisation</p> 
             </div>
           </div> 
-
         </div>
-
-        <div class="top"> 
-          <i><p><a href="#intro">top of the page</a></p></i>
-        </div>  
-
     </section> 
   </main>
  
