@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nicolas Vannson – Senior Data Scientist & Analytics Architect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #0b1020;
+      --card: #111827;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border-subtle: #1f2937;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --radius-pill: 999px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.75);
+      --shadow-subtle: 0 10px 30px rgba(15, 23, 42, 0.6);
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, #38bdf8, #0ea5e9 40%, #1d4ed8 100%);
+      box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.9), 0 0 0 6px rgba(56, 189, 248, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .avatar::after {
+      content: "NV";
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: rgba(15, 23, 42, 0.9);
+      font-size: 18px;
+    }
+
+    .brand-text h1 {
+      font-size: 24px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-text p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    nav a {
+      padding: 8px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(10px);
+      transition: all 0.18s ease-out;
+    }
+
+    nav a:hover {
+      color: var(--text);
+      border-color: rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+      gap: 28px;
+      margin-bottom: 40px;
+    }
+
+    .hero-main {
+      background: radial-gradient(circle at top left, #0f172a 0, #020617 55%);
+      border-radius: 26px;
+      padding: 26px 24px 24px;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-main::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.12), transparent 55%),
+        radial-gradient(circle at 100% 0, rgba(129, 140, 248, 0.12), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-main-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px 4px 4px;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      color: var(--muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 14px;
+    }
+
+    .eyebrow-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #22c55e, #16a34a 45%, #166534 100%);
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.9), 0 0 0 4px rgba(34, 197, 94, 0.35);
+    }
+
+    .hero-title {
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 18px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .tag {
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.85);
+    }
+
+    .tag--accent {
+      border-color: rgba(56, 189, 248, 0.7);
+      color: #e0f2fe;
+      background: rgba(8, 47, 73, 0.9);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-meta span::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.7);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.18s ease-out;
+      background: transparent;
+      color: var(--text);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      color: #0b1120;
+      font-weight: 600;
+      box-shadow: 0 12px 30px rgba(8, 47, 73, 0.7);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(8, 47, 73, 0.9);
+    }
+
+    .btn-ghost {
+      border-color: rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--muted);
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(148, 163, 184, 0.9);
+      color: var(--text);
+      background: rgba(15, 23, 42, 1);
+    }
+
+    .hero-side {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .hero-side-card {
+      background: rgba(15, 23, 42, 0.92);
+      border-radius: 20px;
+      padding: 16px 16px 14px;
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .hero-side-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .hero-side-highlight {
+      font-size: 14px;
+      color: #e5e7eb;
+      margin-bottom: 6px;
+    }
+
+    .hero-side-body {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .hero-side-list {
+      list-style: none;
+      margin-top: 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .hero-side-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .hero-side-list li::before {
+      content: "•";
+      color: rgba(148, 163, 184, 0.9);
+      margin-top: 1px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      font-size: 11px;
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: var(--radius-lg);
+      padding: 16px 16px 14px;
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      box-shadow: var(--shadow-subtle);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .card-badge {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+    }
+
+    .card-badge--accent {
+      border-color: rgba(56, 189, 248, 0.8);
+      color: #e0f2fe;
+      background: rgba(8, 47, 73, 0.9);
+    }
+
+    .card-meta {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .card-body {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .card-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .tool {
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      font-size: 11px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      color: var(--muted);
+    }
+
+    .card-footer {
+      margin-top: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .card-link {
+      font-size: 12px;
+      color: #bae6fd;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .card-link span {
+      font-size: 14px;
+    }
+
+    .stacked-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .stacked-item-title {
+      font-size: 13px;
+      color: var(--text);
+    }
+
+    .stacked-meta {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    details {
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      padding: 12px 14px 10px;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .summary-label {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 11px;
+    }
+
+    .summary-count {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .summary-icon {
+      font-size: 16px;
+      opacity: 0.7;
+    }
+
+    details[open] .summary-icon {
+      transform: rotate(90deg);
+    }
+
+    .pub-list {
+      margin-top: 10px;
+      padding-top: 6px;
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+      max-height: 260px;
+      overflow: auto;
+      padding-right: 4px;
+    }
+
+    .pub-item-title {
+      color: var(--text);
+    }
+
+    footer {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+    }
+
+    footer a {
+      color: #93c5fd;
+    }
+
+    @media (max-width: 840px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-main {
+        padding: 22px 18px 18px;
+      }
+
+      main {
+        padding-inline: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand">
+        <div class="avatar"></div>
+        <div class="brand-text">
+          <h1>Nicolas Vannson</h1>
+          <p>Senior Data Scientist · Analytics Architect · Ph.D. in Neurosciences</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#web">Web platforms</a>
+        <a href="#publications">Publications</a>
+        <a href="#talks">Talks</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-main">
+        <div class="hero-main-inner">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>From audiology to data science</span>
+          </div>
+          <h2 class="hero-title">I turn complex health and behavioral data into actionable, production-ready analytics.</h2>
+          <p class="hero-subtitle">
+            Former audiologist turned data scientist (2024), with a decade of experience in quantitative research,
+            clinical data, and teaching. I design and ship end‑to‑end analytics products—from data pipelines to
+            decision‑ready dashboards—for health and related industries.
+          </p>
+          <div class="hero-tags">
+            <span class="tag tag--accent">Data science & ML</span>
+            <span class="tag">Health & audiology</span>
+            <span class="tag">End‑to‑end delivery</span>
+            <span class="tag">Teaching & leadership</span>
+          </div>
+          <div class="hero-meta">
+            <span>Based in Toulouse, France</span>
+            <span>Ph.D. Neurosciences · fMRI · EEG</span>
+            <span>Python · SQL · Forecasting · MLOps‑lite</span>
+          </div>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              View data projects
+            </a>
+            <a href="#publications" class="btn btn-ghost">
+              Academic track record
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <div class="hero-side-card">
+          <div class="hero-side-title">Current focus</div>
+          <div class="hero-side-highlight">
+            Building analytics products for hearing care and health organizations.
+          </div>
+          <p class="hero-side-body">
+            I combine clinical insight, statistical rigor, and modern Python tooling to help teams:
+          </p>
+          <ul class="hero-side-list">
+            <li>Detect outliers and risk patterns in patient and revenue data</li>
+            <li>Forecast demand and outcomes with interpretable models</li>
+            <li>Ship maintainable dashboards and internal tools</li>
+          </ul>
+        </div>
+
+        <div class="hero-side-card">
+          <div class="hero-side-title">Core stack</div>
+          <div class="pill-row">
+            <span class="pill">Python · pandas · NumPy</span>
+            <span class="pill">scikit‑learn · Prophet</span>
+            <span class="pill">Streamlit · Flask</span>
+            <span class="pill">Matplotlib · Seaborn</span>
+            <span class="pill">Git · CI‑ready workflows</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects">
+      <div class="section-header">
+        <h3 class="section-title">Data science projects</h3>
+        <p class="section-subtitle">Selected end‑to‑end work in forecasting, modeling, and applied health analytics.</p>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <div class="card-header">
+            <h4 class="card-title">Hearing data</h4>
+            <span class="card-badge card-badge--accent">Production‑oriented</span>
+          </div>
+          <p class="card-body">
+            Web app for online hearing clinic database analysis and predictions. Supports exploratory analysis,
+            cohort‑level KPIs, and predictive modeling for clinic performance and patient outcomes.
+          </p>
+          <div class="card-tools">
+            <span class="tool">Flask</span>
+            <span class="tool">Streamlit</span>
+            <span class="tool">pandas</span>
+            <span class="tool">NumPy</span>
+            <span class="tool">scikit‑learn</span>
+            <span class="tool">Prophet</span>
+            <span class="tool">Git</span>
+          </div>
+          <div class="card-footer">
+            <span>Online hearing clinic analytics</span>
+            <a class="card-link" href="#" aria-label="View project">
+              See project <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h4 class="card-title">Features selection for NBA investments</h4>
+            <span class="card-badge">Decision support</span>
+          </div>
+          <p class="card-body">
+            Feature selection pipeline to support theoretical investment decisions on NBA players, focusing on
+            performance, risk, and value metrics.
+          </p>
+          <div class="card-tools">
+            <span class="tool">Flask</span>
+            <span class="tool">pandas</span>
+            <span class="tool">NumPy</span>
+            <span class="tool">scikit‑learn</span>
+            <span class="tool">Seaborn</span>
+            <span class="tool">SciPy</span>
+          </div>
+          <div class="card-footer">
+            <span>Sports analytics · feature engineering</span>
+            <a class="card-link" href="#" aria-label="View project">
+              See project <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h4 class="card-title">Annual income analysis</h4>
+            <span class="card-badge">Confidential client</span>
+          </div>
+          <p class="card-body">
+            Outlier detection and forecasting of annual income trends for a private company, enabling early
+            anomaly detection and scenario planning.
+          </p>
+          <div class="card-tools">
+            <span class="tool">Prophet</span>
+            <span class="tool">pandas</span>
+            <span class="tool">NumPy</span>
+            <span class="tool">Seaborn</span>
+          </div>
+          <div class="card-footer">
+            <span>Time series · anomaly detection</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h4 class="card-title">Garbage detection</h4>
+            <span class="card-badge">Computer vision</span>
+          </div>
+          <p class="card-body">
+            Comparative study of three approaches for garbage detection: PyTorch, TensorFlow, and a manually
+            designed neural network, with a focus on performance vs. complexity trade‑offs.
+          </p>
+          <div class="card-tools">
+            <span class="tool">PyTorch</span>
+            <span class="tool">TensorFlow</span>
+            <span class="tool">Keras</span>
+            <span class="tool">NumPy</span>
+          </div>
+          <div class="card-footer">
+            <span>Model comparison · CV</span>
+            <a class="card-link" href="#" aria-label="View project">
+              See project <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h4 class="card-title">fMRI timeseries analysis</h4>
+            <span class="card-badge">Neuroimaging</span>
+          </div>
+          <p class="card-body">
+            Brain image analysis of patients with unilateral hearing loss, linking fMRI timeseries to behavioral
+            measures to understand functional reorganization.
+          </p>
+          <div class="card-tools">
+            <span class="tool">MATLAB</span>
+            <span class="tool">Neuroimaging pipelines</span>
+          </div>
+          <div class="card-footer">
+            <span>Clinical research · fMRI</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h4 class="card-title">Binaural hearing modeling</h4>
+            <span class="card-badge">Predictive modeling</span>
+          </div>
+          <p class="card-body">
+            Regression analysis and prediction of speech‑in‑noise capabilities in unilateral hearing loss,
+            combining psychoacoustic and clinical variables.
+          </p>
+          <div class="card-tools">
+            <span class="tool">MATLAB</span>
+            <span class="tool">Regression</span>
+          </div>
+          <div class="card-footer">
+            <span>Speech‑in‑noise · clinical data</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="web">
+      <div class="section-header">
+        <h3 class="section-title">Web platforms</h3>
+        <p class="section-subtitle">Domain‑specific platforms for audiology, education, and NGOs.</p>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <div class="card-header">
+            <h4 class="card-title">MEMAU</h4>
+            <span class="card-badge">Education</span>
+          </div>
+          <p class="card-body">
+            Web platform designed to support audiology students with resources, questionnaires, and basic
+            statistical tools for final‑year projects.
+          </p>
+          <div class="card-tools">
+            <span class="tool">WordPress</span>
+            <span class="tool">Divi</span>
+          </div>
+          <div class="card-footer">
+            <span>Student‑facing platform</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h4 class="card-title">MEMAUDATA</h4>
+            <span class="card-badge card-badge--accent">On‑going</span>
+          </div>
+          <p class="card-body">
+            Dedicated web platform to analyze online audiological questionnaires collected via MEMAU, with a focus
+            on scalable data collection and analysis.
+          </p>
+          <div class="card-tools">
+            <span class="tool">WordPress</span>
+            <span class="tool">Gravity Forms</span>
+          </div>
+          <div class="card-footer">
+            <span>Questionnaire analytics</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h4 class="card-title">Enfants sourds du Cambodge</h4>
+            <span class="card-badge">NGO</span>
+          </div>
+          <p class="card-body">
+            Website for an NGO supporting deaf children in Cambodia, used for reporting activities, recruiting
+            members, and fundraising.
+          </p>
+          <div class="card-tools">
+            <span class="tool">WordPress</span>
+          </div>
+          <div class="card-footer">
+            <span>Non‑profit communication</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="section-header">
+        <h3 class="section-title">Publications</h3>
+        <p class="section-subtitle">Peer‑reviewed work bridging hearing science, cognition, and neuroimaging.</p>
+      </div>
+
+      <details open>
+        <summary>
+          <span class="summary-label">Peer‑reviewed journals</span>
+          <span class="summary-count">Key papers & ongoing work</span>
+          <span class="summary-icon">›</span>
+        </summary>
+        <div class="pub-list">
+          <div>
+            <div class="pub-item-title">
+              Hee A., Vannson N. (submitted, 2025). Impact of visual impairment on audiovisual intelligibility in noise.
+            </div>
+          </div>
+          <div>
+            <div class="pub-item-title">
+              Vannson N., Berger T. (in press, 2025). Assessment of psychological distress and thymia in newly fitted
+              presbyacusic patients.
+            </div>
+          </div>
+          <div>
+            <div class="pub-item-title">
+              Mazet M., Enzler F., Vannson N. (in prep, 2025). Pediatric speech‑in‑noise audiometry tests with standardized
+              background noise: Systematic review.
+            </div>
+          </div>
+          <div>
+            <div class="pub-item-title">
+              Gransagne C., Vannson N. (2024). Comparison of Class I and Class II hearing aids in severe hearing loss.
+              <span>Canadian Acoustics, 52(3).</span>
+            </div>
+          </div>
+          <div>
+            <div class="pub-item-title">
+              Vannson N. et al. (submitted, 2024). Long‑term adaptation to cochlear implant simulation: Behavioral and EEG study.
+            </div>
+          </div>
+          <div>
+            <div class="pub-item-title">
+              Brazeau P., Spella P., Vannson N. (2024). Evolution of cognition in presbycusis patients.
+              <span>Revue de Gériatrie, 49(5), 273‑82.</span>
+            </div>
+          </div>
+          <div>
+            <div class="pub-item-title">
+              Mandin C., Spella P., Vannson N. (2024). Impact of hearing aid rehabilitation on self‑esteem in first‑time
+              presbycusis patients.
+              <span>Revue de Gériatrie, 49(2), 83‑94.</span>
+            </div>
+          </div>
+          <div>
+            <div class="pub-item-title">
+              Alzaher M., Vannson N. et al. (2021). Brain plasticity and hearing disorders.
+              <span>Revue Neurologique, 177(9), 1121‑1132.</span>
+            </div>
+          </div>
+          <div>
+            <div class="pub-item-title">
+              Vannson N. et al. (2020). Functional reorganization in the auditory dorsal stream after unilateral hearing loss.
+              <span>Neuropsychologia, 149, 107683.</span>
+            </div>
+          </div>
+          <div>
+            <div class="pub-item-title">
+              Vannson N. et al. (2017). Speech‑in‑noise perception in unilateral hearing loss.
+              <span>Neuropsychologia, 102, 135‑143.</span>
+            </div>
+          </div>
+          <div>
+            <div class="pub-item-title">
+              Vannson N. (2016). Unilateral hearing loss: Psychoacoustic, quality of life, and fMRI approaches.
+              <span>Doctoral dissertation, Université Toulouse III.</span>
+            </div>
+          </div>
+          <div>
+            <div class="pub-item-title">
+              Vannson N. et al. (2015). Quality of life and auditory performance in adults with asymmetric hearing loss.
+              <span>Audiology and Neurotology.</span>
+            </div>
+          </div>
+          <div>
+            <div class="pub-item-title">
+              Vannson N., Innes‑Brown H., Marozeau J. (2015). Dichotic listening and music clarity in cochlear implant users.
+              <span>Trends in Hearing.</span>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <div style="height: 10px;"></div>
+
+      <details>
+        <summary>
+          <span class="summary-label">Other publications</span>
+          <span class="summary-count">French‑language and non‑peer‑reviewed work</span>
+          <span class="summary-icon">›</span>
+        </summary>
+        <div class="pub-list">
+          <div>
+            Vannson N., Innes‑Brown H., Marozeau J. (2018). L’écoute dichotique chez un sujet implanté cochléaire…
+            <span>Revue ACFOS, n°60.</span>
+          </div>
+          <div>
+            Deguine O., Vannson N. et al. (2014). Évaluation du handicap perceptif après surdité unilatérale.
+            <span>Annales françaises d’ORL.</span>
+          </div>
+          <div>
+            Hee A., Vannson N. (in press). Impact de la déficience visuelle sur l’intelligibilité audiovisuelle dans le bruit.
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section id="talks">
+      <div class="section-header">
+        <h3 class="section-title">Selected talks & presentations</h3>
+        <p class="section-subtitle">Invited talks, workshops, and conference contributions.</p>
+      </div>
+
+      <div class="stacked-list">
+        <div>
+          <div class="stacked-item-title">Audiovisual integration</div>
+          <div class="stacked-meta">Online training · Switzerland · 03/2025</div>
+        </div>
+        <div>
+          <div class="stacked-item-title">Unilateral hearing loss</div>
+          <div class="stacked-meta">Université de Louvain (Marie Haps) · Brussels, Belgium · 01/2025</div>
+        </div>
+        <div>
+          <div class="stacked-item-title">Audiological evaluations</div>
+          <div class="stacked-meta">Regional professional meeting · Toulouse, France · 12/2020</div>
+        </div>
+        <div>
+          <div class="stacked-item-title">Perceptual handicap after unilateral hearing loss</div>
+          <div class="stacked-meta">AFON · Dijon, France · 11/2019</div>
+        </div>
+        <div>
+          <div class="stacked-item-title">Neuroscience and Music VI</div>
+          <div class="stacked-meta">Poster · Boston, USA · 06/2017</div>
+        </div>
+        <div>
+          <div class="stacked-item-title">Otology and Neurotology French association</div>
+          <div class="stacked-meta">Paris, France · 09/2015</div>
+        </div>
+        <div>
+          <div class="stacked-item-title">CIAP · Cochlear Implant conference</div>
+          <div class="stacked-meta">Poster · Lake Tahoe, USA · 07/2015</div>
+        </div>
+        <div>
+          <div class="stacked-item-title">International audiology workshop</div>
+          <div class="stacked-meta">Clermont‑Ferrand, France · 04/2015</div>
+        </div>
+        <div>
+          <div class="stacked-item-title">ENT National French congress</div>
+          <div class="stacked-meta">Paris, France · 10/2014</div>
+        </div>
+        <div>
+          <div class="stacked-item-title">BRAMS · Montreal</div>
+          <div class="stacked-meta">Enhancement of music perception · 10/2012</div>
+        </div>
+        <div>
+          <div class="stacked-item-title">Bionics Institute · Melbourne</div>
+          <div class="stacked-meta">Inner hair cell innervation · 08/2012</div>
+        </div>
+        <div>
+          <div class="stacked-item-title">Music Performance and Perception Day · Sydney</div>
+          <div class="stacked-meta">Enhancement of music perception · 05/2012</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© Nicolas Vannson · Senior Data Scientist & Analytics Architect</span>
+      <span>
+        Contact available on request · Portfolio version for senior‑level roles
+      </span>
+    </footer>
+  </main>
+</body>
+</html>

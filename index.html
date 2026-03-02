@@ -26,6 +26,7 @@
     a {color: rgb(7, 7, 7);font-weight: bold;}
     a:hover {color: rgb(47, 12, 245);}
 
+ 
     /*Intro*/
     .intro_container {height: auto;min-height: 100svh; display: flex;justify-content: center;align-items: center;
       flex-direction: column;}
@@ -34,7 +35,7 @@
         overflow-wrap: anywhere; max-width: 60em}
     
     /*projects*/
-    .container {display: grid;grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)) ;justify-content: center;align-items: center;grid-gap:20px;
+    .container {display: grid;grid-template-columns: repeat(auto-fit, minmax(330px,1fr)) ;justify-content: center;align-items: center;grid-gap:20px;
       margin: 0 auto;padding:20px;margin-top:20px;box-sizing: border-box;} /*grid-template-columns: repeat(3, 500px)*/
     .text-container {flex: 1;padding: 10px;text-align:center;}
     .image-container {display: flex;justify-content: center;text-align:center;padding: 10px}
@@ -54,6 +55,53 @@
 
     /* link : go back to top of the page */
     .top{text-align: center;font-size: 0.85em}
+
+    /*Card */
+    .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+
+  .card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background: #f7f7f7;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    max-width: 380px;
+  }
+
+  .card-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+  }
+
+  .card-content h4 {
+    margin: 0;
+  }
+
+  .subtitle {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+    color: #444;
+  }
+
+  .tools {
+    font-size: 0.8rem;
+    color: #555;
+  }
+
+  .card-link {
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    color: #0066cc;
+    text-decoration: none;
+  }
 
  
   /* Responsive section for adjustments */
@@ -130,7 +178,6 @@
 }
 
 
-         
   </style>
     
 
@@ -147,10 +194,10 @@
     <!-- button class for smaller screens -->
     <nav>
       <ul>
-        <li><a href="#DS_projects">Data science projects</a></li>
-        <li><a href="#Web_projects">Web projects </a></li>
+        <li><a href="#Projects">Projects</a></li>
         <li><a href="#Publications">Publications</a></li>
-        <li><a href="#Presentations">Selection of presentations</a></li>
+        <li><a href="#Presentations">Talks</a></li>
+        <li><a href="#Teaching">Teaching</a></li>
         <li><a href="#Awards">Awards/fundings</a></li>
         <li><a href="#Hobbies">Hobbies</a></li>
       </ul>
@@ -169,8 +216,12 @@
       <p> Ph.D. in Neurosciences.</p>
 
       <div class="intro_text-container">
-        <p style="line-height: 1.5;" >Hi! I'm a former audiologist turned hearing data scientist. In September 2025, I founded Hearing Data Science, 
-          a company dedicated to enhance patient care in audiology through clinical data analysis powered by data science and AI. </p>
+        <!-- <p style="line-height: 1.5;" >Hi! I'm a former audiologist turned hearing data scientist. In September 2025, I founded Hearing Data Science, 
+          a company dedicated to enhance patient care in audiology through clinical data analysis powered by data science and AI. </p>-->
+
+          <p style="line-height: 1.5;" >I’m a former audiologist who transitioned into data science to solve one problem: turning clinical complexity into actionable intelligence. 
+            After more than a decade working with hearing‑impaired patients and leading quantitative research, I founded Hearing Data Science in 2025 to help audiology organizations elevate patient care through advanced analytics, 
+            machine learning, and AI‑driven decision support</p>  
      </div>
       
 
@@ -181,22 +232,77 @@
         <a href="https://www.linkedin.com/in/nicolas-vannson-phd/" target="_blank">
           <img src="static/linkedin-logo-dark-blue.png" alt="LinkedIn" width="30" height="30">
         </a>
-       <!-- Github logo 
+       <!-- Github logo  -->
         <a href="https://github.com/MEMAUDATA/" target="_blank">
           <img src="static/Github.png" alt="Github" width="30" height="30">
         </a>
-      </div> -->
-      
+      </div>
     
     </section>
 
-    <!-- Add chapter below which are CV sections--> 
-    <section id="DS_projects" class="section_container">
-      <!-- <h2><span style="color:red">Data science projects <span style="color:rgb(0, 0, 0)"> and not </span> </h2>--> 
-      <h2> Data science projects </span> </h2>
 
+    <!-- HEARING DATA
+    <section id="Projects" class="section_container">
+      <h2>Projects</h2>
+      <h3>Web platforms</h3>
       <div class="container">
 
+ 
+          <div class="box">
+            <div class="image-container">
+              <img src="static/DS.png" width="100" height="100" alt = 'DS'>
+            </div>
+            <div class="text-container">
+              <h3>Hearing Data Science</h3>
+              <p> Web app for online hearing clinic database analysis and predictions.</p> 
+              <p> Tools used:</p> 
+              <p> Flask/Streamlit/Pandas/Scikit-learn/Prophet/FastAPI/NextJs</p>
+              <p><a href="https://hearingdatascience.com/" target="_blank">See project</a></p>  
+            </div>
+          </div> 
+
+       </div>   
+
+
+
+          <div class="cards">
+            <div class="card">
+             
+              <div class="card-content">
+                <h4>Hearing Data Science</h4>
+                <p class="subtitle">Web app for online hearing clinic database analysis and predictions.</p>
+        
+                <p class="tools"><strong>Tools:</strong> Flask, Streamlit, Pandas, Scikit‑learn, Prophet, FastAPI, Next.js</p>
+        
+                <a href="https://hearingdatascience.com/" target="_blank" class="card-link">
+                  See project
+                </a>
+              </div>
+            </div>
+        
+          </div>
+
+
+      </div>
+
+     
+
+     
+
+
+      </div>
+    
+      
+    
+    </section> --> 
+    
+
+    <!-- Add chapter below which are CV sections--> 
+    <section id="Projects" class="section_container">
+      <!-- <h2><span style="color:red">Data science projects <span style="color:rgb(0, 0, 0)"> and not </span> </h2>--> 
+      <h2> Projects</h2>
+
+      <div class="container">
 
         <!-- HEARING DATA--> 
         <div class="box">
@@ -204,10 +310,10 @@
             <img src="static/DS.png" width="100" height="100" alt = 'DS'>
           </div>
           <div class="text-container">
-            <h3>Hearing data </h3>
+            <h3>Hearing Data Science</h3>
             <p> Web app for online hearing clinic database analysis and predictions.</p> 
             <p> Tools used:</p> 
-            <p> Flask/Streamlit/Pandas/Numpy/Scikit-learn/Prophet/</p>
+            <p> Flask/Streamlit/Pandas/Scikit-learn/Prophet/FastAPI/NextJs</p>
             <p><a href="https://hearingdatascience.com/" target="_blank">See project</a></p>  
           </div>
         </div> 
@@ -222,7 +328,7 @@
             <h3> Features selection</h3>
             <p> Features selection for theoretical investment decision for NBA players.</p> 
             <p> Tools used:</p> 
-            <p>Flask/Pandas/Numpy/Scikit-learn/Seaborn/Scipy</p>
+            <p>Flask/Pandas/Scikit-learn/Seaborn/Scipy</p>
             <p> <a href="static/nba.html" target="_blank" >See project</a></p>
           </div>
         </div>
@@ -338,8 +444,8 @@
           <h3>Enfants sourds du Cambodge </h3>
           <p> This NGO website serves as a platform for reporting our activities, recruiting prospective members, and facilitating fundraising initiatives.</p>
           <p> Tools used:</p> 
-          <p> WordPress</p>
-          <p> <a href="https://www.enfantssourdsducambodge.eu/" target="_blank" > ESC website</a></p> 
+          <p> WordPress/Hostinger</p>
+          <p> <a href="https://www.enfantssourdsducambodge.fr/" target="_blank" > ESC website</a></p> 
         </div>
       </div> 
 
@@ -352,35 +458,48 @@
     </section>   
 
 
-
-    
     <section id="Publications" class="section_container">
-      <div class ="publications_container">
-        <h2> Publications</h2>
-        <b>Publications in journal with a peer review committee</b>
-        <br>
+      <div class="publications_container">
+        <h2 id="Publications">Publications</h2>
+        <h3>Publications in journals with a peer‑review committee</h3>
         <ul>
-          <li>Hee A., <b>Vannson N.</b>(2025). <i>Impact of visual impairment on audiovisual intelligibility in noise.</i></li>
-          <li>Berger T., <b>Vannson N.</b>(2025). <i>Assessment of psychological distress and thymia in newly fitted presbyacusic patients.</i>Revue de Geriatrie,50(2),77-85.</li></li>
-          <li>Mazet M., Enzler F., <b>Vannson N.</b> (in press, 2025). <i>Pediatric speech-in-noise audiometry tests with standardized background noise: Systematic review of the literature.</i></li>
-            <li>Gransagne C., <b>Vannson N.</b>(2024). <i>Comparison of Class I and Class II hearing aids in patients with severe hearing loss.</i> Canadian Acoustics,52(3).</li>
-            <li> <b>Vannson N.</b>, Kauramaki J., Strelnikov K., Deguine O., Schönwiesner M., Barone P. (in prep,2025/2026). <i>Long-term adaptation to cochlear implant simulation: A behavioral and EEG study.</i></li>
-            <li>Brazeau P., Spella P., <b>Vannson N.</b>(2024). <i>Evaluation of the evolution of cognition in presbycusis patients.</i> Revue de Geriatrie,49(5),273-282.</li>
-            <li>Mandin C., Spella P., <b>Vannson N.</b>(2024). <i>Study of the impact of hearing aid rehabilitation on self-esteem in presbycusis patients with first-time hearing aids.</i> Revue de Geriatrie,49(2),83-94.</li>
-            <li>Alzaher M., <b>Vannson N.</b>, Deguine O., Marx M., Barone P.,Strelnikov K. (2021). <i>Brain plasticity and hearing disorders.</i> Revue neurologique, 177(9), 1121-1132.</li>
-            <li> <b>Vannson N.</b>, Strelnikov, K., James J., C., Deguine, O., Barone, P., Marx, M. (2020). <i>Evidence of a functional reorganization in the auditory dorsal stream following unilateral hearing loss.</i> Neuropsychologia, 149, 107683.</li>
-            <li> <b>Vannson N.</b>, James, C., Fraysse, B., Strelnikov, K., Deguine, O., Marx, M., Barone, P. (2017). <i>Speech-in-noise perception in unilateral hearing loss: Relation to pure-tone thresholds and brainstem plasticity.</i> Neuropsychologia, 102, 135-143.</li>
-            <li> <b>Vannson N.</b>(2016). <i>Unilateral hearing loss : Psychoacoustic, quality of life questionnaires and neuroimagning (fMRI) approaches.</i> (Doctoral dissertation),Université Toulouse III-Paul Sabatier.</li>
-            <li> <b>Vannson N.</b>, James, C., Fraysse, B., Strelnikov, K., Barone, P., Deguine, O.,Marx, M. (2015). <i>Quality of Life and Auditory Performance in Adults with Asymmetric Hearing Loss.</i> Audiology and Neurotology.</li>
-            <li> <b>Vannson N.</b>, Innes-Brown, H., Marozeau, J.(2015). <i>Dichotic Listening Can Improve Perceived Clarity of Music in Cochlear Implant Users.</i> Trends in Hearing.</li>
+          <li>Mazet, M., Enzler, F., Strelnikov, K., & <b>Vannson, N.</b> (2026). Pediatric speech‑in‑noise audiometry tests with standardized background noise: Systematic review of the literature. <i>European Annals of Otorhinolaryngology, Head and Neck Diseases.</i></li>
+    
+          <li>Hee, A., & <b>Vannson, N.</b> (2025). Impact of visual impairment on audiovisual intelligibility in noise. <i>Canadian Acoustics, 53</i>(4).</li>
+    
+          <li>Berger, T., & <b>Vannson, N.</b> (2025). Assessment of psychological distress and thymia in newly fitted presbyacusic patients. <i>Revue de Gériatrie, 50</i>(2), 77–85.</li>
+    
+          <li>Gransagne, C., & <b>Vannson, N.</b> (2024). Comparison of Class I and Class II hearing aids in patients with severe hearing loss. <i>Canadian Acoustics, 52</i>(3).</li>
+    
+          <li><b>Vannson, N.</b>, Kauramaki, J., Strelnikov, K., Deguine, O., Schönwiesner, M., & Barone, P. (in prep., 2025/2026). Long‑term adaptation to cochlear implant simulation: A behavioral and EEG study.</li>
+    
+          <li>Brazeau, P., Spella, P., & <b>Vannson, N.</b> (2024). Evaluation of the evolution of cognition in presbycusis patients. <i>Revue de Gériatrie, 49</i>(5), 273–282.</li>
+    
+          <li>Mandin, C., Spella, P., & <b>Vannson, N.</b> (2024). Study of the impact of hearing aid rehabilitation on self‑esteem in presbycusis patients with first‑time hearing aids. <i>Revue de Gériatrie, 49</i>(2), 83–94.</li>
+    
+          <li>Alzaher, M.*, <b>Vannson, N.</b>*, Deguine, O., Marx, M., Barone, P., & Strelnikov, K. (2021). Brain plasticity and hearing disorders. <i>Revue Neurologique, 177</i>(9), 1121–1132.</li>(*Co‑first author).
+    
+          <li><b>Vannson, N.</b>, Strelnikov, K., James, C. J., Deguine, O., Barone, P., & Marx, M. (2020). Evidence of a functional reorganization in the auditory dorsal stream following unilateral hearing loss. <i>Neuropsychologia, 149</i>, 107683.</li>
+    
+          <li><b>Vannson, N.</b>, James, C., Fraysse, B., Strelnikov, K., Deguine, O., Marx, M., & Barone, P. (2017). Speech‑in‑noise perception in unilateral hearing loss: Relation to pure‑tone thresholds and brainstem plasticity. <i>Neuropsychologia, 102</i>, 135–143.</li>
+    
+          <li><b>Vannson, N.</b> (2016). <i>Unilateral hearing loss: Psychoacoustic, quality of life questionnaires and neuroimaging (fMRI) approaches</i> (Doctoral dissertation). Université Toulouse III – Paul Sabatier.</li>
+    
+          <li><b>Vannson, N.</b>, James, C., Fraysse, B., Strelnikov, K., Barone, P., Deguine, O., & Marx, M. (2015). Quality of life and auditory performance in adults with asymmetric hearing loss. <i>Audiology and Neurotology.</i></li>
+    
+          <li><b>Vannson, N.</b>, Innes‑Brown, H., & Marozeau, J. (2015). Dichotic listening can improve perceived clarity of music in cochlear implant users. <i>Trends in Hearing.</i></li>
         </ul>
-            <b>Publications in journal without a peer review committee</b>
+    
+        <h3>Publications in journals without a peer‑review committee</h3>
         <ul>
-          <li><b>Vannson N.</b>, Innes-Brown, H., Marozeau, J.(2018). <i>L‘écoute dichotique chez un sujet implanté cochléaire peut améliorer la perception de la clarté de la musique.</i> Revue ACFOS, numéro 60. </li>
-          <li>Deguine, O., <b>Vannson N.</b>, Molinier, C., Marx, M., Lescure, B., Barone, P.(2014). <i>Évaluation du handicap perceptif après surdité unilatérale : évaluation psychoacoustique et qualité de vie.</i> Annales françaises d’Oto-rhino-laryngologie et de Pathologie Cervico-faciale.</li>
-          <li>Hee A., <b>Vannson N.</b>(2025).<i>Impact de la déficience visuelle sur l’intelligibilité audiovisuelle dans le bruit.</i>Les cahiers de l'audition, 38(4).</li>
-        </ul> 
-      </div>   
+          <li><b>Vannson, N.</b>, Innes‑Brown, H., & Marozeau, J. (2018). L’écoute dichotique chez un sujet implanté cochléaire peut améliorer la perception de la clarté de la musique. <i>Revue ACFOS, 60.</i></li>
+    
+          <li>Deguine, O.,* <b>Vannson, N.</b>*, Molinier, C., Marx, M., Lescure, B., & Barone, P. (2014). Évaluation du handicap perceptif après surdité unilatérale : évaluation psychoacoustique et qualité de vie. <i>Annales françaises d’Oto‑rhino‑laryngologie et de Pathologie Cervico‑faciale.</i> (*Co‑first author).</li>
+    
+          <li>Hee, A., & <b>Vannson, N.</b> (2025). Impact de la déficience visuelle sur l’intelligibilité audiovisuelle dans le bruit. <i>Les Cahiers de l’Audition, 38</i>(4).</li>
+        </ul>
+      </div>
+    </section>
 
       <div class="top"> 
         <i><p><a href="#intro">top of the page</a></p></i>
@@ -392,9 +511,9 @@
     <!-- Use same parameters for this sections--> 
     <section id="Presentations" class="section_container">
       <div class="publications_container"> 
-        <h2>Selection of presentations</h2>
+        <h2>Selected talks & presentations</h2>
         <ul>
-          <li><b>02/2026</b>. Thomas More University College - Antwerpen - <b>Belgium</b>.<i> Unilateral hearing loss</i></li>
+          <li><b>02/2026</b>. Thomas More University College - Antwerp - <b>Belgium</b>.<i> Unilateral hearing loss</i></li>
           <li><b>11/2025</b>. Online training presentation - <b>France</b>.<i> Audiovisual integration</i></li>
           <li><b>03/2025</b>. Online training presentation - <b>Switzerland</b>.<i> Audiovisual integration</i></li>
           <li><b>01/2025</b>. U. of Louvain (Marie Haps) - Brussels - <b>Belgium</b>.<i> Unilateral hearing loss</i></li>
@@ -416,6 +535,45 @@
       </div>  
 
     </section> 
+
+   
+    <section id="Teaching" class="section_container">
+      <div class="publications_container">
+        <h2>Teaching – Supervision</h2>
+    
+        <h3>Teaching</h3>
+        <ul>
+          <li><b>Since 2025</b> – Toulouse Business School (TBS).<br>
+              Courses: Basic and advanced Python.<br>
+              Students: Master of Science in Artificial Intelligence and Business Analytics.
+          </li>
+    
+          <li><b>2013-2025</b> – University of Toulouse III – Paul Sabatier.<br>
+              Courses: Statistics, Audiology, Research Methods (final year project).<br>
+              Students: Audiologists and Speech Therapists (since 2020).
+          </li>
+    
+          <li><b>2018–2020</b> – University of Lille II.<br>
+              Courses: Statistics & Research Methods (final year project).<br>
+              Students: Audiologists.
+          </li>
+        </ul>
+    
+        <h3>Supervision</h3>
+        <ul>
+          <li><b>Since 2018</b> – University of Toulouse III – Paul Sabatier.<br>
+              Supervision of more than 25 final‑year projects (Audiology & Speech Therapy).
+          </li>
+        </ul>
+  
+      </div>
+
+      <div class="top"> 
+        <i><p><a href="#intro">top of the page</a></p></i>
+      </div>  
+
+    </section>
+    
 
     <section id="Awards" class="section_container">
       <div class="publications_container"> 
