@@ -7,46 +7,44 @@
     <link rel="icon"  href="static/NICO_favicon_32x32.png">
   </head>
   <style>
-    /*container
-    https://laconsole.dev/blog/guide-creer-conteneurs-css/*/
-
+   
     /*Nav*/
     header {background-color: white;color: rgb(190, 40, 40);padding: 20px;font-family: 'Courier New';
-      font-style: italic;font-weight: lighter;
-      position: absolute;top: 0;right: 0;z-index: 100}  
+      font-style: italic;font-weight: lighter;position: relative;top: 0;right: 0;z-index: 100}  
     header nav {float: right;}
     header nav ul {list-style-type: none;margin: 0;padding: 0;}
     header nav li {float: left;}
     header nav li a {display: block;color: black;text-align: center;padding: 14px 16px;text-decoration: none;}
-      
+
+    /*Menu toggle */
+    .menu-toggle {display: none; cursor: pointer;font-size: 28px;padding: 10px;background-color: transparent;color: black; border: none;font-style: normal;}
+    
+
+    /*title*/
+    .title {font-weight: 600; text-align: center; } .separator { padding: 0 6px; }
+    
+
     /*Body*/
     body {font-family: 'Courier New';display: flex; flex-direction: column; min-height: 100vh; margin: 0; }
-    /*h2 {margin-bottom: 50px;text-align: center;margin-top:30px}*/
     h2 {text-align: center;}
-    p {margin-bottom: 3px;font-style: italic;font-weight: lighter;}
     a {color: rgb(7, 7, 7);font-weight: bold;}
     a:hover {color: rgb(47, 12, 245);}
 
  
     /*Intro*/
-    .intro_container {height: auto;min-height: 100svh; display: flex;justify-content: center;align-items: center;
-      flex-direction: column;}
+    .intro_container {height: auto;min-height: 100svh; display: flex;justify-content: center;align-items: center;flex-direction: column;}
     .intro_image-container {display: flex;justify-content: center;text-align:center;}
-    .intro_text-container {display: flex;justify-content: center;text-align:center;
-        overflow-wrap: anywhere; max-width: 60em}
+    .intro_text-container {display: flex;justify-content: center;text-align:center; overflow-wrap: anywhere; max-width: 60em}
     
     /*projects*/
-    .container {display: grid;grid-template-columns: repeat(auto-fit, minmax(330px,1fr)) ;justify-content: center;align-items: center;grid-gap:20px;
-      margin: 0 auto;padding:20px;margin-top:20px;box-sizing: border-box;} /*grid-template-columns: repeat(3, 500px)*/
-    .text-container {flex: 1;padding: 10px;text-align:center;}
+    .container-subtitle { grid-column: span 1 /-1; text-align: center; font-size: 1.3rem; font-weight: 600; margin-bottom: 10px; }
+    .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 15px; margin: 0 auto; padding: 20px; margin-top: 20px; } 
+    .card { background-color: #E5E5E5; border: 1px solid rgba(0,0,0,0.12); padding: 15px 15px 20px 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);} 
     .image-container {display: flex;justify-content: center;text-align:center;padding: 10px}
-
-    .box {border: 1px #0c0c0c; background-color: #5ca4c1; padding: 20px; border-radius: 5px; min-height: 250px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3)} /*#d5d1d1 form grey  #1792c3 blue #428ba8*/
-    
-    .boxhobbies {border: 0px #0c0c0c; background-color: white; padding: 20px; border-radius: 5px; min-height: 250px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0)} /*#d5d1d1 form grey  #1792c3 blue #428ba8*/
-      
+    .cardhobbies {border: 0px #0c0c0c; background-color: white; padding: 20px; border-radius: 5px;box-shadow: 0 2px 5px rgba(0, 0, 0, 0)} /*#d5d1d1 form grey  #1792c3 blue #428ba8 leu : *#5ca4c1 */
+    .tools {font-size: 0.85rem;margin-top: 6px;margin-bottom: 10px;font-weight: 400;}
+    .project-link {text-decoration: underline;font-weight: 500;}
+    .project-link:hover {text-decoration: none;color: rgb(47, 12, 245)}
 
     /*publications and presentations containers*/  
     .publications_container{justify-content: center;align-items: center;max-width: 1300px;margin:0 auto;padding:30px; }
@@ -57,125 +55,71 @@
     /* link : go back to top of the page */
     .top{text-align: center;font-size: 0.85em}
 
-    /*Card */
-    .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.2rem;
-  }
-
-  .card {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1rem;
-    border-radius: 10px;
-    background: #f7f7f7;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    max-width: 380px;
-  }
-
-  .card-logo {
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
-  }
-
-  .card-content h4 {
-    margin: 0;
-  }
-
-  .subtitle {
-    margin: 0.3rem 0;
-    font-size: 0.9rem;
-    color: #444;
-  }
-
-  .tools {
-    font-size: 0.8rem;
-    color: #555;
-  }
-
-  .card-link {
-    display: inline-block;
-    margin-top: 0.4rem;
-    font-size: 0.85rem;
-    color: #0066cc;
-    text-decoration: none;
-  }
-
- 
-  /* Responsive section for adjustments */
-  /* use : https://hacks.mozilla.org/ for displaying controlling */
-
-  /* Style for smaller screens : mobile */
+  /* Mobile */
   @media (max-width: 767px) {
 
-    /* Whole sections */
-    p {font-size: 0.85em}
-    /*h2 {font-size: 1.3em; margin-bottom: 20px;}
-    h3 {font-size: 1.1em;} 
+    .separator { display: none; }
+    .title { display: flex; flex-direction: column; }
 
-
-    /* Everything is in a single column layout */
-    body, .container, header nav, header nav ul, header nav li, .section_container {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center horizontally */
-    width: 100%; /* Ensure elements take full width */
-    box-sizing: border-box; /* Include padding/border in width */
+    body, .section_container {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      box-sizing: border-box;
     }
 
-    /* header */
-    header nav {display: none;}
-    /*.menu-toggle {display: None;} if menu btn */
-    
-  
-    /*Intro container */
-    .intro_container {padding-top: 10px;padding-bottom: 80px;}
-    .intro_image-container {display: flex;justify-content: center;text-align:center;}
-    .intro_image-container img {padding:10px;margin : 10px 0;max-width: 100%;height: auto;box-sizing: border-box;object-fit: contain;}    
-    .intro_text-container {max-width: 20em}
+    /* Header */
+    header nav { display: block; }
+    .menu-toggle { display: block; }
+    nav ul { display: none; flex-direction: column; background-color: none; padding: 5px; }
+    nav ul.active { display: flex; }
+
+    /* Intro */
+    .intro_container { padding-top: 10px; padding-bottom: 80px; }
+    .intro_image-container img {
+      padding: 10px;
+      margin: 10px 0;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    .intro_text-container { max-width: 20em; }
 
     /* Social links */
     .social-links { display: flex; gap: 10px; align-items: center; }
-    
 
-    /*container*/
-    .text-container {font-size: 0.85em}
-    .image-container img {padding:10px;margin : 5px 0;max-width: 100%;height: auto;box-sizing: border-box;object-fit: contain;}    
-    .publications_container{font-size: 0.85em;}
-    .box,.boxhobbies {min-height: 260px;}
+    /* Project cards */
+    .image-container img {
+      padding: 6px 0;
+      margin: 5px 0;
+      width: 60px;
+      height: 60px;
+    }
 
+    .card, .cardhobbies {
+      min-height: auto;        
+      padding: 15px 15px 30px 15px; 
+    }     
 
+    .publications_container { font-size: 0.85em; }
   }
+
 
   /* Style for tablets*/
   @media (min-width: 768px) and (max-width: 1023px) {
-    
-     /* Whole sections */
-     h3 {font-size: 1.1em;} 
-
-    
-    /*.menu-toggle {display: None;}*/
-    nav ul { display: flex; }
-
-    /*Intro container */
+    .menu-toggle {display: None;}
+     nav ul { display: flex; }
     .intro_text-container {max-width: 40em}
-
-    /*container*/
-    .text-container {font-size: 0.9em}
     .image-container img {padding:10px;margin : 5px 0;max-width: 100%;height: auto;box-sizing: border-box;object-fit: contain;}    
     .publications_container{font-size: 0.85em;}
-
-
-
   }    
+
+
+
   /* Style for desktops */
   @media (min-width: 1024px) {
-
-    /*.menu-toggle {display: None;}*/
+    .menu-toggle {display: None;}
     .container {max-width: 88em;}
-    .box,.boxhobbies{min-height: 400px; flex: 1}   
 }
 
 
@@ -185,14 +129,7 @@
   <body>
   <!--Nav bar -->
   <header>
-    <!-- button class for smaller screens -->
-    <!--<button class="menu-toggle">Menu</button>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </button> -->
-    <!-- button class for smaller screens -->
+    <div class="menu-toggle">☰</div>  
     <nav>
       <ul>
         <li><a href="#Projects">Projects</a></li>
@@ -207,26 +144,18 @@
 
   <!-- Main text presentation -->
   <main>
-    <section id="intro" class="intro_container">  
-       <!-- Img de Nico -->
+
+    <section id="about" class="intro_container">  
       <div class="intro_image-container">
-       <!-- <img src="static/nicogwada.jpeg" alt="Nico" width="230" height="230" style="border-radius: 40px;"> -->
-        <img src="static/Nico_pro_1_compressed.jpg" alt="Nico" width="250" height="230" style="border-radius: 50px;">
+        <img src="static/Nico_pro_1_compressed.jpg" alt="Nico" width="250" height="230" style="border-radius: 50px;" loading="lazy">
       </div>
       <h2>Nicolas Vannson</h2>
-      <h4> Hearing Data Scientist | Ph.D. in Auditory Neuroscience</h4>
-
+      <h4 class="title">Hearing Data Scientist <span class="separator">|</span> Ph.D. in Auditory Neuroscience</h4>
       <div class="intro_text-container">
-        <!-- <p style="line-height: 1.5;" >Hi! I'm a former audiologist turned hearing data scientist. In September 2025, I founded Hearing Data Science, 
-          a company dedicated to enhance patient care in audiology through clinical data analysis powered by data science and AI. </p>-->
-
-          <p style="line-height: 1.5;" >I’m a former audiologist who moved into data science to turn clinical complexity into actionable intelligence. 
-            After more than a decade working with hearing‑impaired patients and leading quantitative research, 
-            I founded Hearing Data Science in 2025 to help audiology organizations improve patient care through advanced analytics, machine learning, and AI‑driven decision support.</p>  
+        <p style="line-height: 1.5;" >I’m a former audiologist who moved into data science to turn clinical complexity into actionable intelligence. 
+          After more than a decade working with hearing‑impaired patients and leading quantitative research, 
+          I founded Hearing Data Science in 2025 to help audiology organizations improve patient care through advanced analytics, machine learning, and AI‑driven decision support.</p>  
      </div>
-      
-
-    <!-- Small spaces for a logo-->
       <!-- Linkedin logo-->
       <p></p>
       <div style="display: flex; gap: 10px; align-items: center;">
@@ -238,225 +167,106 @@
           <img src="static/Github.png" alt="Github" width="30" height="30">
         </a>
       </div>
-    
     </section>
-
-
-    <!-- HEARING DATA
-    <section id="Projects" class="section_container">
-      <h2>Projects</h2>
-      <h3>Web platforms</h3>
-      <div class="container">
-
- 
-          <div class="box">
-            <div class="image-container">
-              <img src="static/DS.png" width="100" height="100" alt = 'DS'>
-            </div>
-            <div class="text-container">
-              <h3>Hearing Data Science</h3>
-              <p> Web app for online hearing clinic database analysis and predictions.</p> 
-              <p> Tools used:</p> 
-              <p> Flask/Streamlit/Pandas/Scikit-learn/Prophet/FastAPI/NextJs</p>
-              <p><a href="https://hearingdatascience.com/" target="_blank">See project</a></p>  
-            </div>
-          </div> 
-
-       </div>   
-
-
-
-          <div class="cards">
-            <div class="card">
-             
-              <div class="card-content">
-                <h4>Hearing Data Science</h4>
-                <p class="subtitle">Web app for online hearing clinic database analysis and predictions.</p>
-        
-                <p class="tools"><strong>Tools:</strong> Flask, Streamlit, Pandas, Scikit‑learn, Prophet, FastAPI, Next.js</p>
-        
-                <a href="https://hearingdatascience.com/" target="_blank" class="card-link">
-                  See project
-                </a>
-              </div>
-            </div>
-        
-          </div>
-
-
-      </div>
-
-     
-
-     
-
-
-      </div>
     
-      
     
-    </section> --> 
-    
-
     <!-- Add chapter below which are CV sections--> 
     <section id="Projects" class="section_container">
-      <!-- <h2><span style="color:red">Data science projects <span style="color:rgb(0, 0, 0)"> and not </span> </h2>--> 
       <h2> Projects</h2>
-
+      <h3 class="container-subtitle">Data Science projects</h3>
       <div class="container">
+        <article class="card">
+           <!-- <div class="image-container">
+            <img src="static/DS.png" width="70" height="70" alt="HDS logo">
+          </div> -->
+          <h3>Hearing Data Science</h3>
+          <p>Designed and built a full SaaS analytics platform for hearing‑care networks, turning multi‑clinic data into real‑time dashboards, predictive models, and operational KPIs used by clinicians and managers.</p>
+          <p class="tools">Architecture: FastAPI · Streamlit · Next.js · PostgreSQL · Docker · <br>CI/CD  
+          Analytics: Pandas · Scikit‑learn · Prophet · Feature engineering · Forecasting</p>
+          <a class="project-link" href="https://hearingdatascience.com/" target="_blank">See project</a>
 
-        <!-- HEARING DATA--> 
-        <div class="box">
-          <div class="image-container">
-            <img src="static/DS.png" width="100" height="100" alt = 'DS'>
-          </div>
-          <div class="text-container">
-            <h3>Hearing Data Science</h3>
-            <p> Web app for online hearing clinic database analysis and predictions.</p> 
-            <p> Tools used:</p> 
-            <p> Flask/Streamlit/Pandas/Scikit-learn/Prophet/FastAPI/NextJs</p>
-            <p><a href="https://hearingdatascience.com/" target="_blank">See project</a></p>  
-          </div>
-        </div> 
-
-
+        </article> 
+        
         <!--  ML NBA --> 
-        <div class="box">
-          <div class="image-container">
-            <img src="static/DS.png" width="100" height="100" alt = 'DS'>
-          </div>
-          <div class="text-container">
-            <h3> Features selection</h3>
-            <p> Features selection for theoretical investment decision for NBA players.</p> 
-            <p> Tools used:</p> 
-            <p>Flask/Pandas/Scikit-learn/Seaborn/Scipy</p>
-            <p> <a href="static/nba.html" target="_blank" >See project</a></p>
-          </div>
-        </div>
+        <article class="card">
+          <h3> Features selection</h3>
+          <p> Features selection for theoretical investment decision for NBA players.</p> 
+          <p class="tools">Flask · Scikit-learn · Pandas · Seaborn · Scipy </p>
+          <a class="project-link" href="static/nba.html" target="_blank">See project</a>
+        </article> 
 
   
-
         <!-- KROK --> 
-        <div class="box">
-          <div class="image-container">
-            <img src="static/DS.png" width="100" height="100"  alt = 'DS'>
-          </div>
-          <div class="text-container">
-            <h3> Confidential company </h3>
-              <p> Annual income analysis for outlier detection and forecasting future income trends.</p> 
-              <p> Tools used:</p> 
-              <p> Prophet/Pandas/Seaborn/Numpy</p>
-              <b><p><u><b>No project to display</b> </u></p></b>
-          </div>
-        </div> 
+        <article class="card">
+          <h3> Confidential company </h3>
+          <p> Annual income analysis for outlier detection and forecasting future income trends.</p> 
+          <p class="tools">Prophet · Streamlit · Pandas · Seaborn </p>
+          <a class="project-link" href="" target="_blank">No project to display</a>
+        </article> 
 
          <!-- Garbage --> 
-         <div class="box">
-          <div class="image-container">
-            <img src="static/DS.png" width="100" height="100"  alt = 'DS'>
-          </div>
-          <div class="text-container">
-            <h3> Computer Vision </h3>
-              <p> Garbage detection using 3 different approaches : Pytorch / TensorFlow / Neural Network manually designed. </p> 
-              <p> Tools used:</p> 
-              <p> Pytorch/TensorFlow/Keras/Numpy</p>
-              <p> <a href="static/garbage2.html" target="_blank" > See project</a></p>
-          </div>
-        </div> 
+         <article class="card">
+          <h3> Computer Vision </h3>
+          <p> Garbage detection using 3 different approaches : Pytorch / TensorFlow / Neural Network manually designed.</p> 
+          <p class="tools">Pytorch · TensorFlow · Keras · Numpy </p>
+          <a class="project-link" href="static/garbage2.html" target="_blank">See project</a>
+        </article> 
 
         <!-- PhD : fMRI --> 
-        <div class="box">
-          <div class="image-container">
-            <img src="static/DS.png" width="100" height="100"  alt = 'DS'>
-          </div>
-          <div class="text-container">
-            <h3> fMRI timeseries analysis </h3>
-              <p> Brain image analysis of patients suffering from unilateral hearing loss and correlation with behavioral data </p> 
-              <p> Tools used:</p> 
-              <p>Matlab</p>
-              <p> <a href="static/fmri.html" target="_blank" > See project</a></p>
-          </div>
-        </div> 
+        <article class="card">
+        <h3> fMRI timeseries analysis </h3>
+        <p> Brain image analysis of patients suffering from unilateral hearing loss and correlation with behavioral data.</p> 
+        <p class="tools">Matlab </p>
+        <a class="project-link" href="static/fmri.html" target="_blank">See project</a>
+        </article> 
 
         <!-- PhD : Binaural hearing --> 
-        <div class="box">
-          <div class="image-container">
-            <img src="static/DS.png" width="100" height="100"  alt = 'DS'>
-          </div>
-          <div class="text-container">
-            <h3> Binaural hearing </h3>
-              <p> Regression analysis and prediction of speech-in-noise capability within unilateral hearing loss subjects. </p> 
-              <p> Tools used:</p> 
-              <p>Matlab</p>
-              <p> <a href="static/binaural.html" target="_blank" > See project</a></p>
-          </div>
-        </div> 
+        <article class="card">
+        <h3> Binaural hearing </h3>
+        <p> Regression analysis and prediction of speech-in-noise capability within unilateral hearing loss subjects.</p> 
+        <p class="tools">Matlab </p>
+        <a class="project-link" href="static/binaural.html" target="_blank">See project </a>
+        </article> 
 
-      </div> 
-
-      <div class="top"> 
-        <i><p><a href="#intro">top of the page</a></p></i>
       </div>  
 
-    </section> 
+       <!-- WEB PROJECTS --> 
+      <h3 class="container-subtitle">Web projects</h3>
 
-    <section id="Web_projects" class="section_container">
-      <h2> Web projects </h2>
-
-      <div class="container">
-
+      <div class="container">  
        <!-- MEMAU --> 
-       <div class="box">
-        <div class="image-container">
-          <img src="static/web.png" width="100" height="100" alt = 'Web'>
-        </div>
-        <div class="text-container">
-          <h3>MEMAU</h3>
-          <p>Web platform designed to help students for their final years project in audiology. 
-            Core functionnalities : ressources librairy, questionnaires, tools for statistics... </p> 
-            <p> Tools used:</p> 
-            <p>Wordpress and Divi</p>
-          <p><a href="https://www.memau.eu" target="_blank">MEMAU</a></p>
-        </div>
-      </div> 
+       <article class="card">
+        <h3> MEMAU</h3>
+        <p> Web platform designed to help students for their final years project in audiology. 
+          Core functionnalities : ressources librairy, questionnaires, tools for statistics... </p> 
+        <p class="tools">Wordpress · Divi </p>
+        <a class="project-link" href="https://www.memau.eu" target="_blank">Website </a>
+        </article> 
 
 
-     
+        <!-- Memaudata --> 
+        <article class="card">
+        <h3> MEMAUDATA</h3>
+        <p> Decicated web plateform to analyze online audiological questionnaires found on MEMAU.</p> 
+        <p class="tools">Wordpress · Javascript </p>
+        <a class="project-link" href="https://data.memau.eu/" target="_blank">Website </a>
+        </article>  
 
-      <!-- Memaudata --> 
-      <div class="box">
-        <div class="image-container">
-          <img src="static/web.png" width="100" height="100" alt = 'Web'>
-        </div>
-        <div class="text-container">
-          <h3>MEMAUDATA</h3>
-          <p>Decicated web plateform to analyze online audiological questionnaires found on MEMAU.</p>  
-          <p> Tools used:</p> 
-          <p> WordPress and Javascript </p>
-          <p><a href="https://data.memau.eu/" target="_blank">MEMAUDATA</a></p>
-      </div>
-    </div>
-      <!-- ESC  --> 
-      <div class="box">
-        <div class="image-container">
-          <img src="static/web.png" width="100" height="100" alt = 'Web'>
-        </div>
-        <div class="text-container">
-          <h3>Enfants sourds du Cambodge </h3>
-          <p> This NGO website serves as a platform for reporting our activities, recruiting prospective members, and facilitating fundraising initiatives.</p>
-          <p> Tools used:</p> 
-          <p> WordPress/Hostinger</p>
-          <p> <a href="https://www.enfantssourdsducambodge.fr/" target="_blank" > ESC website</a></p> 
-        </div>
-      </div> 
+        <!-- Memaudata --> 
+        <article class="card">
+        <h3> Enfants sourds du Cambodge </h3>
+        <p> This NGO website serves as a platform for reporting our activities, recruiting prospective members, and facilitating fundraising initiatives.</p> 
+        <p class="tools">Wordpress </p>
+        <a class="project-link" href="https://www.enfantssourdsducambodge.fr/" target="_blank">Website</a>
+        </article>    
 
-    </div>  
-
-      <div class="top"> 
-        <i><p><a href="#intro">top of the page</a></p></i>
       </div>    
+      </section>   
+    
+      <!-- Top of the page --> 
+      <div class="top"> <i><p><a href="#about">top of the page</a></p></i></div>    
       
-    </section>   
+
 
 
     <section id="Publications" class="section_container">
@@ -465,48 +275,34 @@
         <h3>Publications in journals with a peer‑review committee</h3>
         <ul>
           <li>Mazet, M., Enzler, F., Strelnikov, K., & <b>Vannson, N.</b> (2026). Pediatric speech‑in‑noise audiometry tests with standardized background noise: Systematic review of the literature. <i>European Annals of Otorhinolaryngology, Head and Neck Diseases.</i></li>
-    
           <li>Hee, A., & <b>Vannson, N.</b> (2025). Impact of visual impairment on audiovisual intelligibility in noise. <i>Canadian Acoustics, 53</i>(4).</li>
-    
           <li>Berger, T., & <b>Vannson, N.</b> (2025). Assessment of psychological distress and thymia in newly fitted presbyacusic patients. <i>Revue de Gériatrie, 50</i>(2), 77–85.</li>
-    
           <li>Gransagne, C., & <b>Vannson, N.</b> (2024). Comparison of Class I and Class II hearing aids in patients with severe hearing loss. <i>Canadian Acoustics, 52</i>(3).</li>
-    
-          <li><b>Vannson, N.</b>, Kauramaki, J., Strelnikov, K., Deguine, O., Schönwiesner, M., & Barone, P. (in prep., 2025/2026). Long‑term adaptation to cochlear implant simulation: A behavioral and EEG study.</li>
-    
+         <!-- <li><b>Vannson, N.</b>, Kauramaki, J., Strelnikov, K., Deguine, O., Schönwiesner, M., & Barone, P. (in prep., 2025/2026). Long‑term adaptation to cochlear implant simulation: A behavioral and EEG study.</li> --> 
           <li>Brazeau, P., Spella, P., & <b>Vannson, N.</b> (2024). Evaluation of the evolution of cognition in presbycusis patients. <i>Revue de Gériatrie, 49</i>(5), 273–282.</li>
-    
           <li>Mandin, C., Spella, P., & <b>Vannson, N.</b> (2024). Study of the impact of hearing aid rehabilitation on self‑esteem in presbycusis patients with first‑time hearing aids. <i>Revue de Gériatrie, 49</i>(2), 83–94.</li>
-    
           <li>Alzaher, M.*, <b>Vannson, N.</b>*, Deguine, O., Marx, M., Barone, P., & Strelnikov, K. (2021). Brain plasticity and hearing disorders. <i>Revue Neurologique, 177</i>(9), 1121–1132.</li>(*Co‑first author).
-    
           <li><b>Vannson, N.</b>, Strelnikov, K., James, C. J., Deguine, O., Barone, P., & Marx, M. (2020). Evidence of a functional reorganization in the auditory dorsal stream following unilateral hearing loss. <i>Neuropsychologia, 149</i>, 107683.</li>
-    
           <li><b>Vannson, N.</b>, James, C., Fraysse, B., Strelnikov, K., Deguine, O., Marx, M., & Barone, P. (2017). Speech‑in‑noise perception in unilateral hearing loss: Relation to pure‑tone thresholds and brainstem plasticity. <i>Neuropsychologia, 102</i>, 135–143.</li>
-    
           <li><b>Vannson, N.</b> (2016). <i>Unilateral hearing loss: Psychoacoustic, quality of life questionnaires and neuroimaging (fMRI) approaches</i> (Doctoral dissertation). Université Toulouse III – Paul Sabatier.</li>
-    
           <li><b>Vannson, N.</b>, James, C., Fraysse, B., Strelnikov, K., Barone, P., Deguine, O., & Marx, M. (2015). Quality of life and auditory performance in adults with asymmetric hearing loss. <i>Audiology and Neurotology.</i></li>
-    
           <li><b>Vannson, N.</b>, Innes‑Brown, H., & Marozeau, J. (2015). Dichotic listening can improve perceived clarity of music in cochlear implant users. <i>Trends in Hearing.</i></li>
         </ul>
     
         <h3>Publications in journals without a peer‑review committee</h3>
         <ul>
-          <li><b>Vannson, N.</b>, Innes‑Brown, H., & Marozeau, J. (2018). L’écoute dichotique chez un sujet implanté cochléaire peut améliorer la perception de la clarté de la musique. <i>Revue ACFOS, 60.</i></li>
-    
-          <li>Deguine, O.,* <b>Vannson, N.</b>*, Molinier, C., Marx, M., Lescure, B., & Barone, P. (2014). Évaluation du handicap perceptif après surdité unilatérale : évaluation psychoacoustique et qualité de vie. <i>Annales françaises d’Oto‑rhino‑laryngologie et de Pathologie Cervico‑faciale.</i> (*Co‑first author).</li>
-    
           <li>Hee, A., & <b>Vannson, N.</b> (2025). Impact de la déficience visuelle sur l’intelligibilité audiovisuelle dans le bruit. <i>Les Cahiers de l’Audition, 38</i>(4).</li>
+          <li><b>Vannson, N.</b>, Innes‑Brown, H., & Marozeau, J. (2018). L’écoute dichotique chez un sujet implanté cochléaire peut améliorer la perception de la clarté de la musique. <i>Revue ACFOS, 60.</i></li>
+          <li>Deguine, O.,* <b>Vannson, N.</b>*, Molinier, C., Marx, M., Lescure, B., & Barone, P. (2014). Évaluation du handicap perceptif après surdité unilatérale : évaluation psychoacoustique et qualité de vie. <i>Annales françaises d’Oto‑rhino‑laryngologie et de Pathologie Cervico‑faciale.</i> (*Co‑first author).</li>
         </ul>
       </div>
     </section>
 
       <div class="top"> 
-        <i><p><a href="#intro">top of the page</a></p></i>
+        <i><p><a href="#about">top of the page</a></p></i>
       </div>    
 
-    </section>
+
 
 
     <!-- Use same parameters for this sections--> 
@@ -532,7 +328,7 @@
       </div>
 
       <div class="top"> 
-        <i><p><a href="#intro">top of the page</a></p></i>
+        <i><p><a href="#about">top of the page</a></p></i>
       </div>  
 
     </section> 
@@ -570,7 +366,7 @@
       </div>
 
       <div class="top"> 
-        <i><p><a href="#intro">top of the page</a></p></i>
+        <i><p><a href="#about">top of the page</a></p></i>
       </div>  
 
     </section>
@@ -590,7 +386,7 @@
     </section>
     
       <div class="top"> 
-        <i><p><a href="#intro">top of the page</a></p></i>
+        <i><p><a href="#about">top of the page</a></p></i>
       </div>  
 
     </section>
@@ -601,7 +397,7 @@
         <h2> Hobbies </span> </h2>
         <div class="container">
   
-          <div class="boxhobbies">
+          <div class="cardhobbies">
             <div class="image-container">
               <img src="static/hobby2.png" width="100" height="100" alt = 'hobby'>
             </div>
@@ -611,7 +407,7 @@
             </div>
           </div> 
 
-          <div class="boxhobbies">
+          <div class="cardhobbies">
             <div class="image-container">
               <img src="static/hobby2.png" width="100" height="100" alt = 'hobby'>
             </div>
@@ -622,7 +418,7 @@
             </div>
           </div> 
           
-          <div class="boxhobbies">
+          <div class="cardhobbies">
             <div class="image-container">
               <img src="static/hobby2.png" width="100" height="100" alt = 'hobby'>
             </div>
@@ -634,13 +430,16 @@
         </div>
     </section> 
   </main>
- 
 
+  <!-- For Hambuger Menu -->  
+  <script>
+    document.querySelector('.menu-toggle').onclick = function() {
+        document.querySelector('nav ul').classList.toggle('active');
+    };
+ </script>
+    
+ 
   <!-- Footer -->  
   <footer>
-      <span>© Nicolas Vannson · Senior Data Scientist & Analytics Architect</span>
-      <span>
-        Contact available on request · Portfolio version for senior‑level roles
-      </span>
   </footer>
   </body>
