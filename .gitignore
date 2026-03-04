@@ -1,5 +1,6 @@
 # ignore test folder
 test
 nba.ipynb
+garbage.ipynb
 .venv
 .vscode

@@ -7,3 +7,8 @@ scikit-learn
 scipy
 nbconvert
 Flask
+torch 
+torchvision 
+torchaudio
+tensorflow
+tqdm

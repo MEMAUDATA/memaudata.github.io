@@ -39,12 +39,16 @@
     /*projects*/
     .container-subtitle { grid-column: span 1 /-1; text-align: center; font-size: 1.3rem; font-weight: 600; margin-bottom: 10px; }
     .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 15px; margin: 0 auto; padding: 20px; margin-top: 20px; } 
-    .card { background-color: #E5E5E5; border: 1px solid rgba(0,0,0,0.12); padding: 15px 15px 20px 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);} 
+    .card { display : flex; flex-direction: column;background-color: #E5E5E5; border: 1px solid rgba(0,0,0,0.12); padding: 15px 15px 20px 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);} 
     .image-container {display: flex;justify-content: center;text-align:center;padding: 10px}
     .cardhobbies {border: 0px #0c0c0c; background-color: white; padding: 20px; border-radius: 5px;box-shadow: 0 2px 5px rgba(0, 0, 0, 0)} /*#d5d1d1 form grey  #1792c3 blue #428ba8 leu : *#5ca4c1 */
     .tools {font-size: 0.85rem;margin-top: 6px;margin-bottom: 10px;font-weight: 400;}
     .project-link {text-decoration: underline;font-weight: 500;}
     .project-link:hover {text-decoration: none;color: rgb(47, 12, 245)}
+
+    /* For better vizualisation on cards */
+    .card .project-link { margin-top: auto; }
+    .card p.tools { margin-bottom: 1rem; } 
 
     /*publications and presentations containers*/  
     .publications_container{justify-content: center;align-items: center;max-width: 1300px;margin:0 auto;padding:30px; }
@@ -189,8 +193,9 @@
         
         <!--  ML NBA --> 
         <article class="card">
-          <h3> Features selection</h3>
-          <p> Features selection for theoretical investment decision for NBA players.</p> 
+          <h3> Predicting NBA Player Value </h3>
+          <p> Built a machine‑learning pipeline to identify the metrics that best predict NBA players’ future value, 
+            performed feature selection to isolate the most influential variables, and exposed the results through an interactive Flask interface.</p> 
           <p class="tools">Flask · Scikit-learn · Pandas · Seaborn · Scipy </p>
           <a class="project-link" href="static/nba.html" target="_blank">See project</a>
         </article> 
@@ -199,34 +204,47 @@
         <!-- KROK --> 
         <article class="card">
           <h3> Confidential company </h3>
-          <p> Annual income analysis for outlier detection and forecasting future income trends.</p> 
+          <p> Conducted annual income analysis to identify anomalous patterns and model future revenue trajectories. 
+            Applied statistical outlier detection and Prophet forecasting, with results presented in a Streamlit interface.</p> 
           <p class="tools">Prophet · Streamlit · Pandas · Seaborn </p>
-          <a class="project-link" href="" target="_blank">No project to display</a>
+          <p style = "text-decoration: underline;font-weight: 500;"> No project to display</p>
         </article> 
 
          <!-- Garbage --> 
          <article class="card">
-          <h3> Computer Vision </h3>
-          <p> Garbage detection using 3 different approaches : Pytorch / TensorFlow / Neural Network manually designed.</p> 
-          <p class="tools">Pytorch · TensorFlow · Keras · Numpy </p>
-          <a class="project-link" href="static/garbage2.html" target="_blank">See project</a>
+          <h3> Garbage Detection — Computer Vision</h3>
+          <p> Computer vision project comparing three approaches to garbage detection: 
+            a PyTorch model, a TensorFlow/Keras model, and a manually implemented neural network. 
+            Demonstrates end‑to‑end training, evaluation, and model comparison.</p> 
+          <p class="tools">Pytorch · TensorFlow · Numpy </p>
+          <a class="project-link" href="static/garbage.html" target="_blank">See project</a>
         </article> 
 
         <!-- PhD : fMRI --> 
         <article class="card">
-        <h3> fMRI timeseries analysis </h3>
-        <p> Brain image analysis of patients suffering from unilateral hearing loss and correlation with behavioral data.</p> 
-        <p class="tools">Matlab </p>
-        <a class="project-link" href="static/fmri.html" target="_blank">See project</a>
-        </article> 
+          <h3>fMRI Timeseries Analysis — Unilateral Hearing Loss</h3>
+          <p>
+            Brain‑image analysis of patients with unilateral hearing loss, focusing on fMRI timeseries 
+            extraction, preprocessing, and correlation with behavioral performance. Explored functional 
+            patterns associated with auditory asymmetry.
+          </p>
+          <p class="tools">Matlab </p>
+          <a class="project-link" href="static/fmri.html" target="_blank">See project </a>
+        </article>
+        
 
         <!-- PhD : Binaural hearing --> 
         <article class="card">
-        <h3> Binaural hearing </h3>
-        <p> Regression analysis and prediction of speech-in-noise capability within unilateral hearing loss subjects.</p> 
-        <p class="tools">Matlab </p>
-        <a class="project-link" href="static/binaural.html" target="_blank">See project </a>
-        </article> 
+          <h3>Binaural Hearing — Speech‑in‑Noise Prediction</h3>
+          <p>
+            Regression analysis of patients with unilateral hearing loss to model and predict 
+            speech‑in‑noise performance. Explored relationships between auditory asymmetry, 
+            behavioral measures, and predicted listening capability.
+          </p>
+          <p class="tools">Matlab</p>
+          <a class="project-link" href="static/binaural.html" target="_blank">See project</a>
+        </article>
+        
 
       </div>  
 
