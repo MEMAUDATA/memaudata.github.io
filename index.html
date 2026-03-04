@@ -3,137 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicolas Vannson</title>
-    <link rel="icon"  href="static/NICO_favicon_32x32.png">
+    <meta name="description" content="Portfolio of Nicolas Vannson — Hearing Data Scientist, founder of Hearing Data Science, specialized in audiology, data science, and health‑tech analytics.">
+    <title>Nicolas Vannson — Hearing Data Scientist</title>
+    <link rel="icon" href="static/NICO_favicon_32x32.png">
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Nicolas Vannson — Hearing Data Scientist">
+    <meta property="og:description" content="Portfolio of Nicolas Vannson, founder of Hearing Data Science, specialized in audiology, data science, and health‑tech analytics.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="static/NICO_favicon_32x32.png">
+    <link rel="stylesheet" href="style.css">
   </head>
-  <style>
-   
-    /*Nav*/
-    header {background-color: white;color: rgb(190, 40, 40);padding: 20px;font-family: 'Courier New';
-      font-style: italic;font-weight: lighter;position: relative;top: 0;right: 0;z-index: 100}  
-    header nav {float: right;}
-    header nav ul {list-style-type: none;margin: 0;padding: 0;}
-    header nav li {float: left;}
-    header nav li a {display: block;color: black;text-align: center;padding: 14px 16px;text-decoration: none;}
-
-    /*Menu toggle */
-    .menu-toggle {display: none; cursor: pointer;font-size: 28px;padding: 10px;background-color: transparent;color: black; border: none;font-style: normal;}
-    
-
-    /*title*/
-    .title {font-weight: 600; text-align: center; } .separator { padding: 0 6px; }
-    
-
-    /*Body*/
-    body {font-family: 'Courier New';display: flex; flex-direction: column; min-height: 100vh; margin: 0; }
-    h2 {text-align: center;}
-    a {color: rgb(7, 7, 7);font-weight: bold;}
-    a:hover {color: rgb(47, 12, 245);}
-
- 
-    /*Intro*/
-    .intro_container {height: auto;min-height: 100svh; display: flex;justify-content: center;align-items: center;flex-direction: column;}
-    .intro_image-container {display: flex;justify-content: center;text-align:center;}
-    .intro_text-container {display: flex;justify-content: center;text-align:center; overflow-wrap: anywhere; max-width: 60em}
-    
-    /*projects*/
-    .container-subtitle { grid-column: span 1 /-1; text-align: center; font-size: 1.3rem; font-weight: 600; margin-bottom: 10px; }
-    .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 15px; margin: 0 auto; padding: 20px; margin-top: 20px; } 
-    .card { display : flex; flex-direction: column;background-color: #E5E5E5; border: 1px solid rgba(0,0,0,0.12); padding: 15px 15px 20px 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);} 
-    .image-container {display: flex;justify-content: center;text-align:center;padding: 10px}
-    .cardhobbies {border: 0px #0c0c0c; background-color: white; padding: 20px; border-radius: 5px;box-shadow: 0 2px 5px rgba(0, 0, 0, 0)} /*#d5d1d1 form grey  #1792c3 blue #428ba8 leu : *#5ca4c1 */
-    .tools {font-size: 0.85rem;margin-top: 6px;margin-bottom: 10px;font-weight: 400;}
-    .project-link {text-decoration: underline;font-weight: 500;}
-    .project-link:hover {text-decoration: none;color: rgb(47, 12, 245)}
-
-    /* For better vizualisation on cards */
-    .card .project-link { margin-top: auto; }
-    .card p.tools { margin-bottom: 1rem; } 
-
-    /*publications and presentations containers*/  
-    .publications_container{justify-content: center;align-items: center;max-width: 1300px;margin:0 auto;padding:30px; }
-
-    /* apply to all sections to deals with margins*/
-    .section_container{margin-block:30px 30px ;padding-top: 40px;}
-
-    /* link : go back to top of the page */
-    .top{text-align: center;font-size: 0.85em}
-
-  /* Mobile */
-  @media (max-width: 767px) {
-
-    .separator { display: none; }
-    .title { display: flex; flex-direction: column; }
-
-    body, .section_container {
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    /* Header */
-    header nav { display: block; }
-    .menu-toggle { display: block; }
-    nav ul { display: none; flex-direction: column; background-color: none; padding: 5px; }
-    nav ul.active { display: flex; }
-
-    /* Intro */
-    .intro_container { padding-top: 10px; padding-bottom: 80px; }
-    .intro_image-container img {
-      padding: 10px;
-      margin: 10px 0;
-      max-width: 100%;
-      height: auto;
-      object-fit: contain;
-    }
-    .intro_text-container { max-width: 20em; }
-
-    /* Social links */
-    .social-links { display: flex; gap: 10px; align-items: center; }
-
-    /* Project cards */
-    .image-container img {
-      padding: 6px 0;
-      margin: 5px 0;
-      width: 60px;
-      height: 60px;
-    }
-
-    .card, .cardhobbies {
-      min-height: auto;        
-      padding: 15px 15px 30px 15px; 
-    }     
-
-    .publications_container { font-size: 0.85em; }
-  }
-
-
-  /* Style for tablets*/
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .menu-toggle {display: None;}
-     nav ul { display: flex; }
-    .intro_text-container {max-width: 40em}
-    .image-container img {padding:10px;margin : 5px 0;max-width: 100%;height: auto;box-sizing: border-box;object-fit: contain;}    
-    .publications_container{font-size: 0.85em;}
-  }    
-
-
-
-  /* Style for desktops */
-  @media (min-width: 1024px) {
-    .menu-toggle {display: None;}
-    .container {max-width: 88em;}
-}
-
-
-  </style>
-    
-
   <body>
   <!--Nav bar -->
   <header>
-    <div class="menu-toggle">☰</div>  
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
     <nav>
       <ul>
         <li><a href="#Projects">Projects</a></li>
@@ -163,11 +46,11 @@
       <!-- Linkedin logo-->
       <p></p>
       <div style="display: flex; gap: 10px; align-items: center;">
-        <a href="https://www.linkedin.com/in/nicolas-vannson-phd/" target="_blank">
+        <a href="https://www.linkedin.com/in/nicolas-vannson-phd/" target="_blank" rel="noopener noreferrer">
           <img src="static/linkedin-logo-dark-blue.png" alt="LinkedIn" width="30" height="30">
         </a>
        <!-- Github logo  -->
-        <a href="https://github.com/MEMAUDATA/" target="_blank">
+        <a href="https://github.com/MEMAUDATA/" target="_blank" rel="noopener noreferrer">
           <img src="static/Github.png" alt="Github" width="30" height="30">
         </a>
       </div>
@@ -254,29 +137,33 @@
       <div class="container">  
        <!-- MEMAU --> 
        <article class="card">
-        <h3> MEMAU</h3>
-        <p> Web platform designed to help students for their final years project in audiology. 
-          Core functionnalities : ressources librairy, questionnaires, tools for statistics... </p> 
-        <p class="tools">Wordpress · Divi </p>
+        <h3> MEMAU — Educational platform for audiology training</h3>
+        <p>Designed and deployed a pedagogical platform supporting final‑year audiology students, integrating a structured resource library, interactive questionnaires, and basic statistical tools.
+          <br>Built the site architecture, optimized navigation, and implemented custom modules to support learning workflows and project supervision.
+       </p> 
+        <p class="tools">WordPress · Divi · UX design · Content architecture</p>
         <a class="project-link" href="https://www.memau.eu" target="_blank">Website </a>
         </article> 
 
 
         <!-- Memaudata --> 
         <article class="card">
-        <h3> MEMAUDATA</h3>
-        <p> Decicated web plateform to analyze online audiological questionnaires found on MEMAU.</p> 
-        <p class="tools">Wordpress · Javascript </p>
+        <h3> MEMAUDATA — Web platform for analyzing audiology questionnaires</h3>
+        <p> Developed a dedicated platform to process and analyze audiological questionnaires initially available only in paper form and subsequently digitized on MEMAU. 
+          Built the end‑to‑end data flow, implemented custom JavaScript processing modules, and designed an interface supporting student research and clinical interpretation</p> 
+        <p class="tools">WordPress · JavaScript · Data processing </p>
         <a class="project-link" href="https://data.memau.eu/" target="_blank">Website </a>
         </article>  
 
-        <!-- Memaudata --> 
+        <!-- Enfants sourds du Cambodge --> 
         <article class="card">
-        <h3> Enfants sourds du Cambodge </h3>
-        <p> This NGO website serves as a platform for reporting our activities, recruiting prospective members, and facilitating fundraising initiatives.</p> 
-        <p class="tools">Wordpress </p>
-        <a class="project-link" href="https://www.enfantssourdsducambodge.fr/" target="_blank">Website</a>
-        </article>    
+          <h3>Enfants sourds du Cambodge</h3>
+          <p>Developed and managed the NGO’s website to highlight field work, strengthen member recruitment, 
+            and facilitate fundraising efforts that enable the delivery of hearing devices and batteries to deaf children during missions in Cambodia.</p>
+          <p class="tools">WordPress · Content architecture · Web design</p>
+          <a class="project-link" href="https://www.enfantssourdsducambodge.fr/" target="_blank">Website</a>
+        </article>
+
 
       </div>    
       </section>   
@@ -284,9 +171,6 @@
       <!-- Top of the page --> 
       <div class="top"> <i><p><a href="#about">top of the page</a></p></i></div>    
       
-
-
-
     <section id="Publications" class="section_container">
       <div class="publications_container">
         <h2 id="Publications">Publications</h2>
@@ -411,13 +295,12 @@
 
     <!-- Last section of the page >--> 
     <section id="Hobbies" class="section_container">
-        <!-- <h2><span style="color:red">Data science projects <span style="color:rgb(0, 0, 0)"> and not </span> </h2>--> 
         <h2> Hobbies </span> </h2>
         <div class="container">
   
           <div class="cardhobbies">
             <div class="image-container">
-              <img src="static/hobby2.png" width="100" height="100" alt = 'hobby'>
+              <img src="static/hobby2.png" width="100" height="100" alt = 'hobby' loading="lazy">
             </div>
             <div class="text-container">
               <h3>Sports </h3>
@@ -427,7 +310,7 @@
 
           <div class="cardhobbies">
             <div class="image-container">
-              <img src="static/hobby2.png" width="100" height="100" alt = 'hobby'>
+              <img src="static/hobby2.png" width="100" height="100" alt = 'hobby' loading="lazy">
             </div>
             <div class="text-container">
               <h3>Associative </h3>
@@ -438,7 +321,7 @@
           
           <div class="cardhobbies">
             <div class="image-container">
-              <img src="static/hobby2.png" width="100" height="100" alt = 'hobby'>
+              <img src="static/hobby2.png" width="100" height="100" alt = 'hobby' loading="lazy">
             </div>
             <div class="text-container">
               <h3>Other </h3>
@@ -449,7 +332,7 @@
     </section> 
   </main>
 
-  <!-- For Hambuger Menu -->  
+  <!-- JS for Hambuger Menu -->  
   <script>
     document.querySelector('.menu-toggle').onclick = function() {
         document.querySelector('nav ul').classList.toggle('active');
