@@ -26,7 +26,7 @@ a:hover{color:rgb(47,12,245)}
 .container-subtitle{grid-column:span 1 /-1;text-align:center;font-size:1.3rem;font-weight:600;margin-bottom:10px}
 .container{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:15px;margin:0 auto;padding:20px;margin-top:20px}
 .card{display:flex;flex-direction:column;background-color:#E5E5E5;border:1px solid rgba(0,0,0,0.12);padding:15px 15px 20px 15px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
-.image-container{display:flex;justify-content:center;text-align:center;padding:10px}
+.logo-project{flex-shrink: 0;display:flex;justify-content:center;text-align:center;padding:10px}
 .cardhobbies{border:0;background-color:white;padding:20px;border-radius:5px;box-shadow:0 2px 5px rgba(0,0,0,0)}
 .tools{font-size:0.85rem;margin-top:6px;margin-bottom:10px;font-weight:400}
 .project-link{text-decoration:underline;font-weight:500}
