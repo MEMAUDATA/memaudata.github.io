@@ -9,8 +9,8 @@ header nav li a{display:block;color:black;text-align:center;padding:14px 16px;te
 .menu-toggle{display:none;cursor:pointer;font-size:28px;padding:10px;background-color:transparent;color:black;border:none;font-style:normal}
 
 /* Titre */
-.title{font-weight:600;text-align:center;}.separator{padding:0 6px}
-.mobile-break {display: none;}
+.title{font-weight:600;text-align:center;}
+
           
 
 /* Body */
@@ -48,8 +48,6 @@ a:hover{color:rgb(47,12,245)}
 
 /* Mobile */
 @media (max-width:767px){
-.separator{display:none}
-.mobile-break {display: inline;}
 .title{display:flex;flex-direction:column;text-align:center;gap: 0;font-size:0.95em  }
 body,.section_container{flex-direction:column;align-items:center;width:100%;box-sizing:border-box}
 header nav{display:block}
