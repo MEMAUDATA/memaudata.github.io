@@ -18,6 +18,10 @@
     box-sizing: border-box;
 }
 
+/*For mobile screens */
+html {overflow-x: hidden;}
+
+
 /* Nav */
 header{background-color: var(--bg-primary);padding:20px;font-family:'Courier New';font-style:italic;font-weight:lighter;position:relative;top:0;right:0;z-index:100}
 header nav{float:right}
@@ -80,7 +84,7 @@ nav ul.active{display:flex}
 @media (min-width:768px) and (max-width:1023px){
 .menu-toggle{display:none}
 nav ul{display:flex}
-.intro_text-container{max-width:40em}
+.intro_text-container{max-width:35em}
 header {padding: 28px 30px; }
 header nav li a{font-size: 0.95rem;}
 
