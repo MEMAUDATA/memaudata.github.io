@@ -72,7 +72,7 @@ nav ul.active{display:flex}
 .intro_text-container{max-width:20em}
 .social-links{display:flex;gap:10px;align-items:center}
 .image-container img{padding:6px 0;margin:5px 0;width:60px;height:60px}
-.card,.cardhobbies{min-height:auto;padding:15px 15px 30px 15px}
+.card,.cardhobbies{min-height:auto;width:100%;box-sizing: border-box;padding: 10px;}
 .publications_container{font-size:0.85em}
 .container{display:grid;grid-template-columns: 1fr;margin: 0 auto;gap:10px;padding: 0 10px; width: 100%; box-sizing: border-box; }
 }
