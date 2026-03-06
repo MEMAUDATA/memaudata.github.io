@@ -11,7 +11,12 @@
           }
           
 
-
+/* Global box-sizing reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 /* Nav */
 header{background-color: var(--bg-primary);padding:20px;font-family:'Courier New';font-style:italic;font-weight:lighter;position:relative;top:0;right:0;z-index:100}
@@ -44,7 +49,7 @@ a:hover{ color: var(--hover)}
 /* Containers */
 .project-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:15px;margin:0 auto;padding:20px;}
 .publications_container{justify-content:center;align-items:center;max-width:1300px;margin:0 auto;padding:10px}
-.section_container{max-width: 1300px; margin: 0 auto;margin-top:10px;margin-bottom:10px; }
+.section_container{max-width: 1300px; margin: 0 auto;}
 
 /*Card*/
 .card{display:flex;flex-direction:column;background-color:var(--card-bg-primary);border:1px solid var(--borderbox);padding:15px;border-radius:8px;box-shadow:0 2px 8px var(--shadow)}
@@ -74,6 +79,7 @@ nav ul.active{display:flex}
 .menu-toggle{display:none}
 nav ul{display:flex}
 .intro_text-container{max-width:40em}
+header {padding: 28px 30px; }
 header nav li a{font-size: 0.95rem;}
 
 
