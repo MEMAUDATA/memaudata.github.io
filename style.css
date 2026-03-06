@@ -49,7 +49,7 @@ a:hover{ color: var(--hover)}
 /* Containers */
 .project-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:15px;margin:0 auto;padding:20px;}
 .publications_container{justify-content:center;align-items:center;max-width:1300px;margin:0 auto;padding:10px}
-.section_container{max-width: 1300px; margin: 0 auto;}
+.section_container{max-width: 1300px; margin: 0 auto;margin-bottom:10px;}
 
 /*Card*/
 .card{display:flex;flex-direction:column;background-color:var(--card-bg-primary);border:1px solid var(--borderbox);padding:15px;border-radius:8px;box-shadow:0 2px 8px var(--shadow)}
@@ -61,7 +61,7 @@ a:hover{ color: var(--hover)}
 .card .card-link{margin-top:auto}
 
 /* Home link */
-.top{text-align:center;font-size:0.85em}
+.top{text-align:center;font-size:0.85em;margin:5px;}
 
 /* Mobile */
 @media (max-width:767px){
@@ -71,7 +71,7 @@ nav ul{display:none;flex-direction:column;background-color:none;font-size: 0.9re
 nav ul.active{display:flex}
 /* title and subtitle*/
 .title {font-size:1.2em }
-.subtitle,.left-subtitle{font-size:0.95em }
+.subtitle,.left-subtitle{font-size:0.95em;text-align:center; }
 }
 
 /* Tablettes */
