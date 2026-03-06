@@ -61,20 +61,23 @@ a:hover{ color: var(--hover)}
 
 /* Mobile */
 @media (max-width:767px){
-.title{display:flex;flex-direction:column;text-align:center;gap: 0;font-size:0.95em  }
-body,.section_container{flex-direction:column;align-items:center;width:100%;box-sizing:border-box}
 header nav{display:block}
 .menu-toggle{display:block}
 nav ul{display:none;flex-direction:column;background-color:none;padding:5px}
 nav ul.active{display:flex}
+.title{display:flex;flex-direction:column;text-align:center;gap: 0;font-size:0.95em }
+body,
+.section_container,
+.publications_container,
+{flex-direction:column;align-items:center;width:100%;box-sizing:border-box,font-size:0.85em}
 .intro_container{padding-top:10px;padding-bottom:80px}
 .intro_image-container img{padding:10px;margin:10px 0;max-width:100%;height:auto;object-fit:contain}
 .intro_text-container{max-width:20em}
 .social-links{display:flex;gap:10px;align-items:center}
 .image-container img{padding:6px 0;margin:5px 0;width:60px;height:60px}
 .card,.cardhobbies{min-height:auto;width:100%;box-sizing: border-box;padding: 10px;}
-.publications_container{font-size:0.85em}
-.container{display:grid;grid-template-columns: 1fr;margin: 0 auto;gap:10px;padding:10px; width: 100%; box-sizing: border-box; }
+
+.container{display:grid;grid-template-columns: 1fr;margin: 0 auto;gap:10px;padding:15px; width: 100%; box-sizing: border-box;}
 }
 
 /* Tablettes */
