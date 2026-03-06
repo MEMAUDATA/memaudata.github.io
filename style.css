@@ -1,23 +1,35 @@
+/* Color definition */
+:root {
+--bg-primary            : white
+--menu-bg-primary       : transparent
+--txt-primary           : rgb(7,7,7)
+--hover                 : rgb(47,12,245)
+--shadow                : rgba(0,0,0,0.06)
+--borderbox             : rgba(0,0,0,0.12)
+--card-bg-primary       : #E5E5E5
+
+}
+
+
+
 /* Nav */
-header{background-color:white;color:rgb(190,40,40);padding:20px;font-family:'Courier New';font-style:italic;font-weight:lighter;position:relative;top:0;right:0;z-index:100}
+header{background-color: var(--bg-primary);padding:20px;font-family:'Courier New';font-style:italic;font-weight:lighter;position:relative;top:0;right:0;z-index:100}
 header nav{float:right}
 header nav ul{list-style-type:none;margin:0;padding:0}
 header nav li{float:left}
 header nav li a{display:block;color:black;text-align:center;padding:14px 16px;text-decoration:none}
 
 /* Menu toggle */
-.menu-toggle{display:none;cursor:pointer;font-size:28px;padding:10px;background-color:transparent;color:black;border:none;font-style:normal}
+.menu-toggle{display:none;cursor:pointer;font-size:28px;padding:10px;background-color:var(--menu-bg-primary);color: var(--txt-primary) ;border:none;font-style:normal}
 
 /* Titre */
 .title{font-weight:600;text-align:center;}
 
-          
-
 /* Body */
 body{font-family:'Courier New';display:flex;flex-direction:column;min-height:100vh;margin:0}
 h2{text-align:center}
-a{color:rgb(7,7,7);font-weight:bold}
-a:hover{color:rgb(47,12,245)}
+a{ color: var(--txt-primary);font-weight:bold}
+a:hover{ color: var(--hover)}
 
 /* Intro */
 .intro_container{height:auto;min-height:100svh;display:flex;justify-content:center;align-items:center;flex-direction:column}
@@ -28,12 +40,12 @@ a:hover{color:rgb(47,12,245)}
 /* Projets */
 .container-subtitle{grid-column:span 1 /-1;text-align:center;font-size:1.3rem;font-weight:600;margin-bottom:10px}
 .container{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:15px;margin:0 auto;padding:20px;margin-top:20px}
-.card{display:flex;flex-direction:column;background-color:#E5E5E5;border:1px solid rgba(0,0,0,0.12);padding:15px 15px 20px 15px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.card{display:flex;flex-direction:column;background-color:var(--card-bg-primary );border:1px solid var(--borderbox);padding:15px 15px 20px 15px;border-radius:8px;box-shadow:0 2px 8px var(--shadow)}
 .logo-project{flex-shrink: 0;display:flex;justify-content:center;text-align:center;padding:10px}
-.cardhobbies{border:0;background-color:white;padding:20px;border-radius:5px;box-shadow:0 2px 5px rgba(0,0,0,0)}
+.cardhobbies{border:0;background-color:white;padding:20px;border-radius:5px;box-shadow:0 2px 5px var(--shadow)}
 .tools{font-size:0.85rem;margin-top:6px;margin-bottom:10px;font-weight:400}
 .project-link{text-decoration:underline;font-weight:500}
-.project-link:hover{text-decoration:none;color:rgb(47,12,245)}
+.project-link:hover{text-decoration:none;color:var(--hover)}
 .card .project-link{margin-top:auto}
 .card p.tools{margin-bottom:1rem}
 
@@ -61,7 +73,7 @@ nav ul.active{display:flex}
 .image-container img{padding:6px 0;margin:5px 0;width:60px;height:60px}
 .card,.cardhobbies{min-height:auto;padding:15px 15px 30px 15px}
 .publications_container{font-size:0.85em}
-.container{display:grid;grid-template-columns:repeat(auto-fit,minmax(250,1fr));gap:10px;margin:0 auto;padding:15px;}
+.container{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;margin:0 auto;padding:20px;margin-top:20px}
 }
 
 /* Tablettes */
