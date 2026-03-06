@@ -58,139 +58,136 @@
       <div class="intro_image-container">
         <img src="static/Nico_pro_1_compressed.jpg" alt="Nico" width="250" height="235" style="border-radius: 50px;" loading="lazy">
       </div>
-      <h2>Nicolas Vannson</h2>
-      <h3 class="title">Hearing Data Scientist<br>PhD in Auditory Neuroscience</h3>
-      <div class="intro_text-container">
-        <p style="line-height: 1.5;" >I’m a former audiologist who moved into data science to turn clinical complexity into actionable intelligence. 
+      <h2 class="title">Nicolas Vannson</h2>
+      <h3 class="subtitle">Hearing Data Scientist<br> PhD in Auditory Neuroscience</h3>
+      <p class="intro_text-container" >I’m a former audiologist who moved into data science to turn clinical complexity into actionable intelligence. 
           After more than a decade working with hearing‑impaired patients and leading quantitative research, 
           I founded Hearing Data Science in 2025 to help audiology organizations improve patient care through advanced analytics, machine learning, and AI‑driven decision support.</p>  
-     </div>
-      <!-- Linkedin logo-->
-      <p></p>
-      <div style="display: flex; gap: 10px; align-items: center;">
+     
+      <!-- Linkedin and Github logos-->
+      <div class="social-links">
         <a href="https://www.linkedin.com/in/nicolas-vannson-phd/" target="_blank" rel="noopener noreferrer">
-          <img src="static/linkedin-logo-dark-blue.png" alt="LinkedIn" width="30" height="30">
+          <img class="social-icon" src="static/linkedin-logo-dark-blue.png" alt="LinkedIn" width="30" height="30">
         </a>
-       <!-- Github logo  -->
         <a href="https://github.com/MEMAUDATA/" target="_blank" rel="noopener noreferrer">
-          <img src="static/Github.png" alt="Github" width="30" height="30">
+          <img class="social-icon" src="static/Github.png" alt="GitHub" width="30" height="30">
         </a>
       </div>
+      
     </section>
     
     <!-- Add chapter below which are CV sections--> 
     <section id="Projects" class="section_container">
-      <h2> Projects</h2>
-      <h3 class="container-subtitle">Data Science projects</h3>
-      <div class="container">
+      <h2 class="title"> Projects</h2>
+      <h3 class="subtitle">Data Science projects</h3>
+      <div class="project-container">
 
         <!--  HDS --> 
         <article class="card">
-          <img class="logo-project" src="static/icone-blanc-bleu.svg" width="70" height="70" alt="HDS logo">
+          <img class="card-logo" src="static/icone-blanc-bleu.svg" width="70" height="70" alt="HDS logo">
           <h3>Hearing Data Science</h3>
           <p>Designed and built a full SaaS analytics platform for hearing‑care networks, turning multi‑clinic data into real‑time dashboards, predictive models, and operational KPIs used by clinicians and managers.</p>
-          <p class="tools">Architecture: FastAPI · Streamlit · Next.js · PostgreSQL · Docker · <br>CI/CD  
+          <p class="card-tools">Architecture: FastAPI · Streamlit · Next.js · PostgreSQL · Docker · <br>CI/CD  
           Analytics: Pandas · Scikit‑learn · Prophet · Feature engineering · Forecasting</p>
-          <a class="project-link" href="https://hearingdatascience.com/" target="_blank">See project</a>
+          <a class="card-link" href="https://hearingdatascience.com/" target="_blank">See project</a>
         </article>
 
 
         <!--  ML NBA -->
         <article class="card">
-          <img class="logo-project" src="static/batch_prediction_24dp_1F1F1F.svg" width="70" height="70" alt="Predictions">
+          <img class="card-logo" src="static/batch_prediction_24dp_1F1F1F.svg" width="70" height="70" alt="Predictions">
           <h3> Predicting NBA Player Value </h3>
           <p> Built a machine‑learning pipeline to identify the metrics that best predict NBA players’ future value, 
             performed feature selection to isolate the most influential variables, and exposed the results through an interactive Flask interface.</p> 
-          <p class="tools">Flask · Scikit-learn · Pandas · Seaborn · Scipy </p>
-          <a class="project-link" href="static/nba.html" target="_blank">See project</a>
+          <p class="card-tools">Flask · Scikit-learn · Pandas · Seaborn · Scipy </p>
+          <a class="card-link" href="static/nba.html" target="_blank">See project</a>
         </article>  
 
         <!-- KROK --> 
         <article class="card">
-          <img class="logo-project" src="static/DS.png" width="70" height="70" alt="DS">
+          <img class="card-logo" src="static/DS.png" width="70" height="70" alt="DS">
           <h3> Confidential company </h3>
           <p> Conducted annual income analysis to identify anomalous patterns and model future revenue trajectories. 
             Applied statistical outlier detection and Prophet forecasting, with results presented in a Streamlit interface.</p> 
-          <p class="tools">Prophet · Streamlit · Pandas · Seaborn </p>
+          <p class="card-tools">Prophet · Streamlit · Pandas · Seaborn </p>
           <p style = "text-decoration: underline;font-weight: 500;"> No project to display</p>
         </article> 
 
         <!-- Garbage --> 
         <article class="card">
-          <img class="logo-project" src="static/model_training_24dp_1F1F1F.svg" width="70" height="70" alt="ML">
+          <img class="card-logo" src="static/model_training_24dp_1F1F1F.svg" width="70" height="70" alt="ML">
           <h3> Garbage Detection — Computer Vision</h3>
           <p> Computer vision project comparing three approaches to garbage detection: 
             a PyTorch model, a TensorFlow/Keras model, and a manually implemented neural network. 
             Demonstrates end‑to‑end training, evaluation, and model comparison.</p> 
-          <p class="tools">Pytorch · TensorFlow · Numpy </p>
-          <a class="project-link" href="static/garbage.html" target="_blank">See project</a>
+          <p class="card-tools">Pytorch · TensorFlow · Numpy </p>
+          <a class="card-link" href="static/garbage.html" target="_blank">See project</a>
         </article> 
 
          <!-- PhD : fMRI --> 
          <article class="card">
-          <img class="logo-project" src="static/matlab.png" width="80" height="70" alt="fMRI">
+          <img class="card-logo" src="static/matlab.png" width="80" height="70" alt="fMRI">
           <h3>fMRI Timeseries Analysis — Unilateral Hearing Loss</h3>
           <p>
             Brain‑image analysis of patients with unilateral hearing loss, focusing on fMRI timeseries 
             extraction, preprocessing, and correlation with behavioral performance. Explored functional 
             patterns associated with auditory asymmetry.
           </p>
-          <p class="tools">Matlab </p>
-          <a class="project-link" href="static/fmri.html" target="_blank">See project </a>
+          <p class="card-tools">Matlab </p>
+          <a class="card-link" href="static/fmri.html" target="_blank">See project </a>
         </article>
 
         <!-- PhD : Binaural hearing --> 
         <article class="card">
-          <img class="logo-project" src="static/matlab.png" width="80" height="70" alt="Binaural">
+          <img class="card-logo" src="static/matlab.png" width="80" height="70" alt="Binaural">
           <h3>Binaural Hearing — Speech‑in‑Noise Prediction</h3>
           <p>
             Regression analysis of patients with unilateral hearing loss to model and predict 
             speech‑in‑noise performance. Explored relationships between auditory asymmetry, 
             behavioral measures, and predicted listening capability.
           </p>
-          <p class="tools">Matlab</p>
-          <a class="project-link" href="static/binaural.html" target="_blank">See project</a>
+          <p class="card-tools">Matlab</p>
+          <a class="card-link" href="static/binaural.html" target="_blank">See project</a>
         </article>
 
 
       </div>
 
-
-      <h3 class="container-subtitle">Web projects</h3>
-      <div class="container"> 
-
-        <!-- MEMAU --> 
-       <article class="card">
-        <img class="logo-project" src="static/logo-memau-violet.svg" width="120" height="50" alt="WEB MEMAU">
-        <h3> MEMAU — Educational platform for audiology training</h3>
-        <p>Designed and deployed a pedagogical platform supporting final‑year audiology students, integrating a structured resource library, interactive questionnaires, and basic statistical tools.
-          <br>Built the site architecture, optimized navigation, and implemented custom modules to support learning workflows and project supervision.
-       </p> 
-        <p class="tools">WordPress · Divi · UX design · Content architecture</p>
-        <a class="project-link" href="https://www.memau.eu" target="_blank">Website </a>
-        </article> 
-
-        <!-- Memaudata --> 
-        <article class="card">  
-          <img class="logo-project" src="static/logo-memau-data-bleu.svg" width="150" height="50" alt="WEB MEMAUDATA">
-          <h3> MEMAUDATA — Web platform for analyzing audiology questionnaires</h3>
-          <p> Developed a dedicated platform to process and analyze audiological questionnaires initially available only in paper form and subsequently digitized on MEMAU. 
-            Built the end‑to‑end data flow, implemented custom JavaScript processing modules, and designed an interface supporting student research and clinical interpretation</p> 
-          <p class="tools">WordPress · JavaScript · Data processing </p>
-          <a class="project-link" href="https://data.memau.eu/" target="_blank">Website </a>
-        </article>  
-
-        <!-- Enfants sourds du Cambodge --> 
-        <article class="card">
-          <img class="logo-project" src="static/logo_esc_nobkg.png" width="120" height="51" alt="ESC">
-          <h3>Enfants sourds du Cambodge</h3>
-          <p>Developed and managed the NGO’s website to highlight field work, strengthen member recruitment, 
-            and facilitate fundraising efforts that enable the delivery of hearing devices and batteries to deaf children during missions in Cambodia.</p>
-          <p class="tools">WordPress · Content architecture · Web design</p>
-          <a class="project-link" href="https://www.enfantssourdsducambodge.fr/" target="_blank">Website</a>
-        </article>
-
-      </div>   
+      <h3 class="subtitle">Web projects</h3>
+      <div class="project-container">
+          <!-- MEMAU --> 
+          <article class="card">
+            <img class="card-logo" src="static/logo-memau-violet.svg" width="120" height="50" alt="WEB MEMAU">
+            <h3> MEMAU — Educational platform for audiology training</h3>
+            <p>Designed and deployed a pedagogical platform supporting final‑year audiology students, integrating a structured resource library, interactive questionnaires, and basic statistical card-tools.
+              <br>Built the site architecture, optimized navigation, and implemented custom modules to support learning workflows and project supervision.
+          </p> 
+            <p class="card-tools">WordPress · Divi · UX design · Content architecture</p>
+            <a class="card-link" href="https://www.memau.eu" target="_blank">Website </a>
+            </article> 
+  
+            <!-- Memaudata --> 
+            <article class="card">  
+              <img class="card-logo" src="static/logo-memau-data-bleu.svg" width="150" height="50" alt="WEB MEMAUDATA">
+              <h3> MEMAUDATA — Web platform for analyzing audiology questionnaires</h3>
+              <p> Developed a dedicated platform to process and analyze audiological questionnaires initially available only in paper form and subsequently digitized on MEMAU. 
+                Built the end‑to‑end data flow, implemented custom JavaScript processing modules, and designed an interface supporting student research and clinical interpretation</p> 
+              <p class="card-tools">WordPress · JavaScript · Data processing </p>
+              <a class="card-link" href="https://data.memau.eu/" target="_blank">Website </a>
+            </article>  
+  
+            <!-- Enfants sourds du Cambodge --> 
+            <article class="card">
+              <img class="card-logo" src="static/logo_esc_nobkg.png" width="120" height="51" alt="ESC">
+              <h3>Enfants sourds du Cambodge</h3>
+              <p>Developed and managed the NGO’s website to highlight field work, strengthen member recruitment, 
+                and facilitate fundraising efforts that enable the delivery of hearing devices and batteries to deaf children during missions in Cambodia.</p>
+              <p class="card-tools">WordPress · Content architecture · Web design</p>
+              <a class="card-link" href="https://www.enfantssourdsducambodge.fr/" target="_blank">Website</a>
+            </article>
+      </div>    
+        
+    
       
     </section> 
     <!-- Top of the page --> 
@@ -202,8 +199,8 @@
        
     <section id="Publications" class="section_container">
       <div class="publications_container">
-        <h2>Publications</h2>
-        <h3>Publications in journals with a peer‑review committee</h3>
+        <h2 class="title"> Publications</h2>
+        <h3 class="left-subtitle">Publications in journals with a peer‑review committee</h3>
         <ul>
           <li>Mazet, M., Enzler, F., Strelnikov, K., & <b>Vannson, N.</b> (2026). Pediatric speech‑in‑noise audiometry tests with standardized background noise: Systematic review of the literature. <i>European Annals of Otorhinolaryngology, Head and Neck Diseases.</i></li>
           <li>Hee, A., & <b>Vannson, N.</b> (2025). Impact of visual impairment on audiovisual intelligibility in noise. <i>Canadian Acoustics, 53</i>(4).</li>
@@ -219,8 +216,7 @@
           <li><b>Vannson, N.</b>, James, C., Fraysse, B., Strelnikov, K., Barone, P., Deguine, O., & Marx, M. (2015). Quality of life and auditory performance in adults with asymmetric hearing loss. <i>Audiology and Neurotology.</i></li>
           <li><b>Vannson, N.</b>, Innes‑Brown, H., & Marozeau, J. (2015). Dichotic listening can improve perceived clarity of music in cochlear implant users. <i>Trends in Hearing.</i></li>
         </ul>
-    
-        <h3>Publications in journals without a peer‑review committee</h3>
+        <h3 class="left-subtitle">Publications in journals without a peer‑review committee</h3>
         <ul>
           <li>Hee, A., & <b>Vannson, N.</b> (2025). Impact de la déficience visuelle sur l’intelligibilité audiovisuelle dans le bruit. <i>Les Cahiers de l’Audition, 38</i>(4).</li>
           <li><b>Vannson, N.</b>, Innes‑Brown, H., & Marozeau, J. (2018). L’écoute dichotique chez un sujet implanté cochléaire peut améliorer la perception de la clarté de la musique. <i>Revue ACFOS, 60.</i></li>
@@ -239,7 +235,7 @@
     <!-- Use same parameters for this sections--> 
     <section id="Presentations" class="section_container">
       <div class="publications_container"> 
-        <h2>Selected talks & presentations</h2>
+        <h2 class="title"> Selected talks & presentations</h2>
         <ul>
           <li><b>02/2026</b>. Thomas More University College - Antwerp - <b>Belgium</b>.<i> Unilateral hearing loss</i></li>
           <li><b>11/2025</b>. Online training presentation - <b>France</b>.<i> Audiovisual integration</i></li>
@@ -268,9 +264,8 @@
    
     <section id="Teaching" class="section_container">
       <div class="publications_container">
-        <h2>Teaching – Supervision</h2>
-    
-        <h3>Teaching</h3>
+        <h2 class="title"> Teaching – Supervision</h2>
+        <h3 class="left-subtitle">Teaching</h3>
         <ul>
           <li><b>Since 2025</b> – Toulouse Business School (TBS).<br>
               Courses: Basic and advanced Python.<br>
@@ -287,8 +282,8 @@
               Students: Audiologists.
           </li>
         </ul>
-    
-        <h3>Supervision</h3>
+  
+        <h3 class="left-subtitle">Supervision</h3>
         <ul>
           <li><b>Since 2018</b> – University of Toulouse III – Paul Sabatier.<br>
               Supervision of more than 25 final‑year projects (Audiology & Speech Therapy).
@@ -306,7 +301,7 @@
 
     <section id="Awards" class="section_container">
       <div class="publications_container"> 
-        <h2>Awards/fundings</h2>
+        <h2 class="title"> Awards/fundings</h2>
         <ul>
           <li><b>2020</b>. French National Research Agency (ANR) – AgeHear Project – €200,000 Research Grant</li>
           <li><b>2017</b>. National PhD Prize in Auditory Sciences – First Prize – Neurodis Foundation – €5000 Research Grant</li>
@@ -324,12 +319,12 @@
     <!-- Last section of the page >--> 
     <section id="Hobbies" class="section_container">
       <div class="publications_container"> 
-        <h2> Hobbies </h2>
-        <h3>Sports</h3>
+        <h2 class="title"> Hobbies</h2>
+        <h3 class="left-subtitle">Sports</h3>
         <ul>
           <li>Handball/football/Skiing/Snowboarding/Bouldering/squash</li>
         </ul> 
-        <h3>Associative</h3>
+        <h3 class="left-subtitle">Associative</h3>
         <ul>
           <li>Founder of both MEMAU & MEMAUDATA</li>
           <li>Webmaster of Enfants Sourds du Cambodge (NGO)</li>
