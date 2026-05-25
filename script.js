@@ -113,29 +113,24 @@
       const user = 'vannson.nicolas';
       const domain = 'gmail.com';
       const email = user + '@' + domain;
-  
-      // Predefined message templates per action
-      const messages = {
-        hello: {
-          subject: 'Hello Nicolas',
-          body: ''
-        },
-        cv: {
-          subject: 'CV request - Nicolas Vannson',
-          body: 'Hi Nicolas,\n\nI would like to receive your CV.\n\nContext: '
-        }
-      };
-  
+
       mailButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
-          const action = btn.dataset.action || 'hello';
-          const msg = messages[action] || messages.hello;
+          const subject = 'CV request - Nicolas Vannson';
+          const body = 'Hi Nicolas,\n\nI would like to receive your CV.\n\nContext: ';
           const url = 'mailto:' + email
-            + '?subject=' + encodeURIComponent(msg.subject)
-            + '&body=' + encodeURIComponent(msg.body);
+            + '?subject=' + encodeURIComponent(subject)
+            + '&body=' + encodeURIComponent(body);
           window.location.href = url;
         });
       });
     }
+          
+      
+  
+     
+
+
+
   
   })();
