@@ -1,8 +1,13 @@
-### Personnal webpage in order to depict my career path and my data scientist skills.
+# Nicolas Vannson — Portfolio
 
-- Creation : NV, Toulouse, Dec 2024 
-- Updated : NV, Toulouse, 01-03-2026
-- Updated : NV, Toulouse, 25-05-2026
+Personal portfolio showcasing my career and data science work.
+Live at [memaudata.github.io](https://memaudata.github.io).
 
+## License
 
-url : https://memaudata.github.io/
+MIT — see [LICENSE](LICENSE).
+
+## Author
+
+**Nicolas Vannson** — Hearing Data Scientist
+[memaudata.github.io](https://memaudata.github.io) · [hearingdatascience.com](https://hearingdatascience.com)
