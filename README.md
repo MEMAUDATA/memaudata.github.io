@@ -5,4 +5,4 @@
 - Updated : NV, Toulouse, 25-05-2026
 
 
-url : https://github.com/MEMAUDATA/memaudata.github.io
+url : https://memaudata.github.io/
